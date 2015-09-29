@@ -1,0 +1,88 @@
+1、boot/rmtopm.asm
+nasm rmtopm.asm -o rmtopm.bin -l rmtopm.lst
+
+2、boot/oshead.asm
+nasm -f elf oshead.asm -o oshead.o -l oshead.lst
+
+3、oslib/clib.c
+ gcc -c -fno-builtin -nostdinc clib.c -o clib.o>clib.map -Xlinker -M
+ 
+4、oslib/oslib.asm,oslib/string.asm
+nasm -f elf oslib.asm -o oshead.o -l oslib.lst
+nasm -f elf string.asm -o oshead.o -l string.lst
+
+5、mm/pf.asm
+ nasm -f elf pf.asm -o pf.o -l pf.lst
+
+6、mm/memory.c
+gcc -c -fno-builtin -I ../include memory.c -o memory.o>memory.map -Xlinker -M
+
+7、连接mm/pf.o和mm/memory.o并生成mm.o
+ld -r memory.o pf.o -o mm.o>mm.map -M
+
+8、kernel/interrupt.asm
+ nasm -f elf interrupt.asm  -o interrupta.o -l interrupta.lst 
+ 
+ 9、kernel/interrupt.c
+ gcc -c -fno-builtin -I ../include interrupt.c -o interruptc.o
+ 
+ 10、连接interrupta.o和interruptc.o
+  ld -r interrupta.o interruptc.o -o interrupt.o>interrupt.map -M
+  
+11、i8259.asm
+ nasm -f elf i8259.asm -o i8259a.o -l i8259a.lst
+ 
+ 12、i8259.c
+  gcc -c -fno-builtin -nostdinc -I ../include i8259.c -o i8259c.o
+  
+  13、ld i8259a.o and i8259c.o
+  ld -r i8259a.o i8259c.o -o i8259.o>i8259.map -M
+  
+14、syscall.asm和syscall.c
+gcc -c -fno-builtin -I ../include syscall.c -o syscallc.o
+gcc -c -fno-builtin -I ../include syscall.c -o syscallc.o
+ld -r syscalla.o syscallc.o -o syscall.o -M
+
+15、vsprintf.c,printfs.c
+gcc -c -fno-builtin -nostdinc -I ../include vsprintf.c -o vsprintf.o
+gcc -c -fno-builtin -nostdinc -I ../include printfs.c -o printfs.o
+ld -r vsprintf.o printfs.o -o printf.o>printf.map -M
+
+16、buffer.c
+gcc -c -fno-builtin -nostdinc  -I ../include buffer.c -o buffer.o
+
+17、fork.c
+ gcc -c -fno-builtin -nostdinc  -I ../include fork.c -o fork.o
+ 
+ 18、kernel.asm和kernel.c
+ nasm -f elf kernel.asm -o kernela.o -l kernela.lst
+ gcc -c -fno-builtin -nostdinc -I ../include kernel.c -o kernelc.o
+  
+  19、ktime.c
+   gcc -c -fno-builtin -nostdinc -I ../include kernel.c -o kernelc.o
+   
+20、kernel/blk
+ gcc -c -fno-builtin -nostdinc -I ../../include hd.c -o hd.o
+  gcc -c -fno-builtin -nostdinc -I ../../include rw_blk.c -o rw_blk.o>hd.map -Xlinker -M
+  gcc -c -fno-builtin -nostdinc -I ../../include blk.c -o blk.o>blk.map -Xlinker -M
+  ld -r hd.o blkc.o rw_blk.o -o blk.o>blk.map -M
+  
+  21、keyboard.c console.c tty.c
+  gcc -c -fno-builtin -nostdinc -I ../../include keyboard.c -o keyboard.o
+  gcc -c -fno-builtin -nostdinc -I ../../include console.c -o console.o
+  gcc -c -fno-builtin -nostdinc -I ../../include tty.c -o ttyc.o
+  ld -r keyboard.o console.o ttyc.o -o tty.o>tty.map -M
+  
+  22、kmain.c
+   gcc -c -fno-builtin -nostdinc -I ../include kmain.c -o kmain.o>kmain.map -Xlinker -M
+   
+   23、fs
+   gcc -c -fno-builtin -nostdinc -I ../include bitmap.c -o bitmap.o
+    gcc -c -fno-builtin -nostdinc -I ../include inode.c -o inode.o
+   gcc -c -fno-builtin -nostdinc -I ../include namei.c -o namei.o
+   gcc -c -fno-builtin -nostdinc -I ../include file.c -o file.o
+   gcc -c -fno-builtin -nostdinc -I ../include block_dev.c -o block_dev.o
+    gcc -c -fno-builtin -nostdinc -I ../include chr_dev.c -o chr_dev.o
+     gcc -c -fno-builtin -nostdinc -I ../include file_dev.c -o file_dev.o
+      gcc -c -fno-builtin -nostdinc -I ../include rw.c -o rw.o
+      ld -r bitmap.o super.o inode.o truncate.o namei.o file.o block_dev.o chr_dev.o file_dev.o -o fs.o>fs.map -M

@@ -1,0 +1,132 @@
+     1                                  ;******************************************************************************************
+     2                                  ;
+     3                                  ;   i8259.asm-IRQ0-IRQ15中断处理程序接口
+     4                                  ;       
+     5                                  ;   Copyright (C) 2010 杨习辉
+     6                                  ;
+     7                                  ;******************************************************************************************/
+     8                                  
+     9                                  extern irq_handler_table
+    10                                  
+    11                                  global irq_0,irq_1,irq_2,irq_3,irq_4,irq_5,irq_6,irq_7
+    12                                  global irq_8,irq_9,irq_10,irq_11,irq_12,irq_13,irq_14,irq_15
+    13                                  
+    14                                  ;所有的irq中断都 没有错误号，包括一些使用int n指令发出调用的中断
+    15                                  ;即使按照定义有错误号存在
+    16                                  
+    17                                  irq_0:
+    18 00000000 FF35[00000000]              push    dword [irq_handler_table + 0 * 4]   ;将中断处理程序地址入栈
+    19 00000006 6A20                        push    0x20                                ;8259控制端口地址
+    20 00000008 E9BA000000                  jmp     handle_irq
+    21                                  irq_1:
+    22 0000000D FF35[04000000]              push    dword [irq_handler_table + 1 * 4]
+    23 00000013 6A20                        push    0x20
+    24 00000015 E9AD000000                  jmp     handle_irq
+    25                                  irq_2:
+    26 0000001A FF35[08000000]              push    dword [irq_handler_table + 2 * 4]
+    27 00000020 6A20                        push    0x20
+    28 00000022 E9A0000000                  jmp     handle_irq
+    29                                  irq_3:
+    30 00000027 FF35[0C000000]              push    dword [irq_handler_table + 3 * 4]
+    31 0000002D 6A20                        push 0x20
+    32 0000002F E993000000                  jmp     handle_irq
+    33                                  irq_4:
+    34 00000034 FF35[10000000]              push    dword [irq_handler_table + 4 * 4]
+    35 0000003A 6A20                        push    0x20
+    36 0000003C E986000000                  jmp     handle_irq
+    37                                  irq_5:
+    38 00000041 FF35[14000000]              push    dword [irq_handler_table + 5 * 4]
+    39 00000047 6A20                        push    0x20
+    40 00000049 EB7C                        jmp     handle_irq
+    41                                  irq_6:
+    42 0000004B FF35[18000000]              push    dword [irq_handler_table + 6 * 4]
+    43 00000051 6A20                        push    0x20
+    44 00000053 EB72                        jmp     handle_irq
+    45                                  irq_7:
+    46 00000055 FF35[1C000000]              push    dword [irq_handler_table + 7 * 4]
+    47 0000005B 6A20                        push    0x20
+    48 0000005D EB68                        jmp     handle_irq
+    49                                  irq_8:
+    50 0000005F FF35[20000000]              push    dword [irq_handler_table + 8 * 4]
+    51 00000065 68A0000000                  push    0xA0
+    52 0000006A EB5B                        jmp     handle_irq
+    53                                  irq_9:
+    54 0000006C FF35[24000000]              push    dword [irq_handler_table + 9 * 4]
+    55 00000072 68A0000000                  push    0xA0
+    56 00000077 EB4E                        jmp     handle_irq
+    57                                  irq_10:
+    58 00000079 FF35[28000000]              push    dword [irq_handler_table + 10 * 4]
+    59 0000007F 68A0000000                  push    0xA0
+    60 00000084 EB41                        jmp     handle_irq
+    61                                  irq_11:
+    62 00000086 FF35[2C000000]              push    dword [irq_handler_table + 11 * 4]
+    63 0000008C 68A0000000                  push    0xA0
+    64 00000091 EB34                        jmp     handle_irq
+    65                                  irq_12:
+    66 00000093 FF35[30000000]              push    dword [irq_handler_table + 12 * 4]
+    67 00000099 68A0000000                  push    0xA0
+    68 0000009E EB27                        jmp     handle_irq
+    69                                  irq_13:
+    70 000000A0 FF35[34000000]              push    dword [irq_handler_table + 13 * 4]
+    71 000000A6 68A0000000                  push    0xA0
+    72 000000AB EB1A                        jmp     handle_irq
+    73                                  irq_14:
+    74 000000AD FF35[38000000]              push    dword [irq_handler_table + 14 * 4]
+    75 000000B3 68A0000000                  push    0xA0
+    76 000000B8 EB0D                        jmp     handle_irq
+    77                                  irq_15:
+    78 000000BA FF35[3C000000]              push    dword [irq_handler_table + 15 * 4]
+    79 000000C0 68A0000000                  push    0xA0
+    80 000000C5 EB00                        jmp     handle_irq
+    81                                      
+    82                                  ;下面是真正的处理过程
+    83                                  handle_irq:
+    84                                      ;首先保存现场
+    85 000000C7 87442404                    xchg    eax,[esp + 4]           ;现在中断处理程序的地址在eax了
+    86 000000CB 871C24                      xchg    ebx,[esp]
+    87 000000CE 51                          push    ecx
+    88 000000CF 52                          push    edx
+    89 000000D0 56                          push    esi
+    90 000000D1 57                          push    edi
+    91 000000D2 55                          push    ebp
+    92 000000D3 1E                          push    ds
+    93 000000D4 06                          push    es
+    94 000000D5 0FA8                        push    gs
+    95 000000D7 0FA0                        push    fs
+    96                                      
+    97                                      ;将这些段寄存器指向内核，gs留为用户进程与内核通信用
+    98 000000D9 50                          push    eax
+    99 000000DA B810000000                  mov     eax,0x10
+   100 000000DF 8ED8                        mov     ds,ax
+   101 000000E1 8EC0                        mov     es,ax
+   102 000000E3 8EE0                        mov     fs,ax
+   103 000000E5 B817000000                  mov     eax,0x17
+   104 000000EA 8EE8                        mov     gs,ax
+   105 000000EC 58                          pop     eax
+   106                                      
+   107                                      ;将中断之前的系统运行特权级压堆栈
+   108 000000ED 8B542430                    mov     edx,[esp + 12*4]
+   109 000000F1 83E203                      and     edx,3
+   110 000000F4 52                          push    edx
+   111                                      ;发出EOI
+   112 000000F5 B020                        mov     al,0x20
+   113 000000F7 E620                        out     0x20,al
+   114                                      ;调用中断处理程序
+   115 000000F9 FFD0                        call    eax
+   116                                      ;返回
+   117 000000FB 83C404                      add     esp,4                   ;跳过压入的特权级
+   118 000000FE 0FA1                        pop     fs
+   119 00000100 0FA9                        pop     gs
+   120 00000102 07                          pop     es
+   121 00000103 1F                          pop     ds
+   122 00000104 5D                          pop     ebp
+   123 00000105 5F                          pop     edi
+   124 00000106 5E                          pop     esi
+   125 00000107 5A                          pop     edx
+   126 00000108 59                          pop     ecx
+   127 00000109 5B                          pop     ebx
+   128 0000010A 58                          pop     eax
+   129                                      ;中断返回
+   130 0000010B CF                          iret
+   131                                      
+   132                                      

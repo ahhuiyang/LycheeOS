@@ -1,0 +1,321 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD kernel/interrupta.o
+LOAD kernel/interruptc.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x0000000000000000      0x4b0
+ *(.text .stub)
+ .text          0x0000000000000000       0xf2 kernel/interrupta.o
+                0x000000000000003f                coprocessor_seg_overrun
+                0x000000000000002a                invalid_opcode
+                0x0000000000000069                reserved
+                0x0000000000000000                divide_error
+                0x0000000000000031                coprocessor_not_avl
+                0x000000000000005b                general_protection
+                0x000000000000001c                overflow
+                0x0000000000000038                double_fault
+                0x0000000000000062                coprocessor_error
+                0x0000000000000023                bounds_check
+                0x0000000000000046                invalid_tss
+                0x000000000000004d                seg_not_present
+                0x0000000000000054                stack_exception
+                0x0000000000000007                single_step
+                0x000000000000000e                nmi
+                0x0000000000000015                int3
+ *fill*         0x00000000000000f2        0x2 90909090
+ .text          0x00000000000000f4      0x3bc kernel/interruptc.o
+                0x000000000000021e                do_double_fault
+                0x00000000000001da                do_invalid_opcode
+                0x00000000000002c8                do_general_protection
+                0x0000000000000174                do_int3
+                0x0000000000000262                do_invalid_tss
+                0x000000000000010e                do_divide_error
+                0x0000000000000240                do_coprocessor_seg_overrun
+                0x0000000000000152                do_nmi
+                0x0000000000000284                do_seg_not_present
+                0x000000000000030c                do_reserved
+                0x000000000000032e                int_init
+                0x00000000000002ea                do_coprocessor_error
+                0x00000000000001b8                do_bounds_check
+                0x0000000000000130                do_single_step
+                0x0000000000000196                do_overflow
+                0x00000000000001fc                do_coprocessor_not_avl
+                0x00000000000002a6                do_stack_exception
+ *(.gnu.warning)
+
+.fini
+ *(.fini)
+
+.rodata         0x0000000000000000      0x1ce
+ *(.rodata)
+ .rodata        0x0000000000000000      0x1ce kernel/interruptc.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+.fini_array
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.got.plt
+ *(.got.plt)
+
+.data           0x0000000000000000       0x50
+ *(.data)
+ .data          0x0000000000000000       0x50 kernel/interruptc.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x0000000000000000        0x0 kernel/interruptc.o
+ *(COMMON)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x3a
+ *(.comment)
+ .comment       0x0000000000000000       0x3a kernel/interruptc.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+OUTPUT(kernel/interrupt.o elf32-i386)
+
+.comment.SUSE.OPTs
+                0x0000000000000000        0x5
+ .comment.SUSE.OPTs
+                0x0000000000000000        0x5 kernel/interruptc.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/interruptc.o

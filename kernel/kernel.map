@@ -1,0 +1,484 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD kernel/interrupt.o
+LOAD kernel/i8259.o
+LOAD kernel/syscall.o
+LOAD kernel/buffer.o
+LOAD kernel/fork.o
+LOAD kernel/kernelt.o
+LOAD kernel/ktime.o
+LOAD kernel/printf.o
+LOAD kernel/sched.o
+LOAD kernel/process.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x0000000000000000     0x21dc
+ *(.text .stub)
+ .text          0x0000000000000000      0x4b0 kernel/interrupt.o
+                0x000000000000003f                coprocessor_seg_overrun
+                0x000000000000021e                do_double_fault
+                0x000000000000002a                invalid_opcode
+                0x0000000000000069                reserved
+                0x0000000000000000                divide_error
+                0x0000000000000031                coprocessor_not_avl
+                0x000000000000005b                general_protection
+                0x00000000000001da                do_invalid_opcode
+                0x000000000000001c                overflow
+                0x00000000000002c8                do_general_protection
+                0x0000000000000174                do_int3
+                0x0000000000000262                do_invalid_tss
+                0x000000000000010e                do_divide_error
+                0x0000000000000240                do_coprocessor_seg_overrun
+                0x0000000000000152                do_nmi
+                0x0000000000000284                do_seg_not_present
+                0x0000000000000038                double_fault
+                0x0000000000000062                coprocessor_error
+                0x000000000000030c                do_reserved
+                0x000000000000032e                int_init
+                0x00000000000002ea                do_coprocessor_error
+                0x00000000000001b8                do_bounds_check
+                0x0000000000000023                bounds_check
+                0x0000000000000130                do_single_step
+                0x0000000000000046                invalid_tss
+                0x000000000000004d                seg_not_present
+                0x0000000000000054                stack_exception
+                0x0000000000000196                do_overflow
+                0x00000000000001fc                do_coprocessor_not_avl
+                0x0000000000000007                single_step
+                0x000000000000000e                nmi
+                0x00000000000002a6                do_stack_exception
+                0x0000000000000015                int3
+ .text          0x00000000000004b0      0x3b4 kernel/i8259.o
+                0x0000000000000543                irq_12
+                0x0000000000000505                irq_7
+                0x00000000000004f1                irq_5
+                0x0000000000000782                enable_irq
+                0x000000000000055d                irq_14
+                0x00000000000004b0                irq_0
+                0x00000000000004d7                irq_3
+                0x00000000000004fb                irq_6
+                0x0000000000000529                irq_10
+                0x0000000000000536                irq_11
+                0x00000000000004ca                irq_2
+                0x00000000000004bd                irq_1
+                0x00000000000004e4                irq_4
+                0x000000000000050f                irq_8
+                0x000000000000056a                irq_15
+                0x0000000000000550                irq_13
+                0x00000000000005bc                init_8259A
+                0x000000000000051c                irq_9
+                0x000000000000083c                set_irq_handler
+                0x00000000000007de                disable_irq
+ *fill*         0x0000000000000864        0xc 90909090
+ .text          0x0000000000000870       0x85 kernel/syscall.o
+                0x00000000000008ae                sys_fork
+                0x00000000000008c0                set_system_call
+                0x0000000000000870                sys_call
+                0x00000000000008d8                syscall_init
+ *fill*         0x00000000000008f5        0x3 90909090
+ .text          0x00000000000008f8      0x726 kernel/buffer.o
+                0x000000000000092c                unlock_mem_buffer
+                0x0000000000000e39                brelease
+                0x0000000000000960                wait_on_buffer
+                0x0000000000000a6d                invalid_dev_buffers
+                0x0000000000000c09                get_buffer
+                0x0000000000000983                sync_dev
+                0x0000000000000f19                mem_buffer_init
+                0x0000000000000b47                find_buffer
+                0x0000000000000e8c                bread
+                0x00000000000008f8                lock_mem_buffer
+ *fill*         0x000000000000101e        0x2 90909090
+ .text          0x0000000000001020      0x47b kernel/fork.o
+                0x0000000000001020                copy_memory
+                0x0000000000001161                copy_process
+                0x0000000000001460                get_free_process
+                0x000000000000114b                get_last_pid
+ *fill*         0x000000000000149b        0x5 90909090
+ .text          0x00000000000014a0      0x385 kernel/kernelt.o
+                0x0000000000001771                get_seg_limit
+                0x00000000000016bb                set_ldt_desc
+                0x00000000000014a0                reload_cr3
+                0x00000000000015fc                set_system_gate
+                0x0000000000001643                set_descriptor
+                0x000000000000162b                halts
+                0x0000000000001716                set_tss_desc
+                0x00000000000014ab                load_seg
+                0x0000000000001626                halt
+                0x00000000000015d2                set_trap_gate
+                0x00000000000017ca                get_seg_base
+                0x00000000000017f8                set_seg_base
+                0x00000000000014e0                set_interrupt_gate
+ *fill*         0x0000000000001825        0x3 90909090
+ .text          0x0000000000001828       0xd9 kernel/ktime.o
+                0x00000000000018db                timer_init
+                0x0000000000001828                get_startup_time
+ *fill*         0x0000000000001901        0x3 90909090
+ .text          0x0000000000001904      0x3ce kernel/printf.o
+                0x0000000000001bd8                vsprintf
+                0x0000000000001c84                printfs
+ *fill*         0x0000000000001cd2        0x2 90909090
+ .text          0x0000000000001cd4      0x508 kernel/sched.o
+                0x0000000000001ee7                sys_pause
+                0x0000000000001db1                sleep_on
+                0x0000000000001cd4                schedule
+                0x0000000000001e79                irq_timer_handler
+                0x0000000000001df9                interruptible_sleep_on
+                0x0000000000001f04                sched_init
+                0x0000000000001ed7                sys_getpid
+                0x0000000000001e65                wake_up
+ .text          0x00000000000021dc        0x0 kernel/process.o
+ *(.gnu.warning)
+
+.fini
+ *(.fini)
+
+.rodata         0x0000000000000000      0x2b1
+ *(.rodata)
+ .rodata        0x0000000000000000      0x1ce kernel/interrupt.o
+ *fill*         0x00000000000001ce        0x2 00
+ .rodata        0x00000000000001d0       0x6b kernel/buffer.o
+ .rodata        0x000000000000023b       0x27 kernel/fork.o
+ *fill*         0x0000000000000262        0x2 00
+ .rodata        0x0000000000000264       0x4d kernel/printf.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+.fini_array
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.got.plt
+ *(.got.plt)
+
+.data           0x0000000000000000       0xb0
+ *(.data)
+ .data          0x0000000000000000       0x50 kernel/interrupt.o
+ .data          0x0000000000000050        0x0 kernel/i8259.o
+ .data          0x0000000000000050       0x14 kernel/syscall.o
+                0x0000000000000050                sys_call_table
+ .data          0x0000000000000064        0x0 kernel/buffer.o
+ .data          0x0000000000000064        0x0 kernel/fork.o
+ .data          0x0000000000000064        0x0 kernel/kernelt.o
+ *fill*         0x0000000000000064       0x1c 00
+ .data          0x0000000000000080       0x30 kernel/ktime.o
+                0x0000000000000080                days_of_month
+ .data          0x00000000000000b0        0x0 kernel/printf.o
+ .data          0x00000000000000b0        0x0 kernel/sched.o
+ .data          0x00000000000000b0        0x0 kernel/process.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000        0xc
+ *(.dynbss)
+ *(.bss)
+ .bss           0x0000000000000000        0x0 kernel/interrupt.o
+ .bss           0x0000000000000000        0x0 kernel/i8259.o
+ .bss           0x0000000000000000        0x0 kernel/syscall.o
+ .bss           0x0000000000000000        0x8 kernel/buffer.o
+                0x0000000000000000                nr_buffers
+ .bss           0x0000000000000008        0x4 kernel/fork.o
+                0x0000000000000008                sys_last_pid
+ .bss           0x000000000000000c        0x0 kernel/kernelt.o
+ .bss           0x000000000000000c        0x0 kernel/ktime.o
+ .bss           0x000000000000000c        0x0 kernel/printf.o
+ .bss           0x000000000000000c        0x0 kernel/sched.o
+ .bss           0x000000000000000c        0x0 kernel/process.o
+ *(COMMON)
+ COMMON         0x000000000000000c        0x0 kernel/i8259.o
+ COMMON         0x000000000000000c        0x0 kernel/buffer.o
+ COMMON         0x000000000000000c        0x0 kernel/kernelt.o
+ COMMON         0x000000000000000c        0x0 kernel/printf.o
+ COMMON         0x000000000000000c        0x0 kernel/sched.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x27e
+ *(.comment)
+ .comment       0x0000000000000000       0x3a kernel/interrupt.o
+ .comment       0x000000000000003a       0x3a kernel/i8259.o
+ .comment       0x0000000000000074       0x3a kernel/syscall.o
+ .comment       0x00000000000000ae       0x3a kernel/buffer.o
+ .comment       0x00000000000000e8       0x3a kernel/fork.o
+ .comment       0x0000000000000122       0x3a kernel/kernelt.o
+ .comment       0x000000000000015c       0x3a kernel/ktime.o
+ .comment       0x0000000000000196       0x74 kernel/printf.o
+ .comment       0x000000000000020a       0x3a kernel/sched.o
+ .comment       0x0000000000000244       0x3a kernel/process.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+OUTPUT(kernel/kernel.o elf32-i386)
+
+.comment.SUSE.OPTs
+                0x0000000000000000       0x37
+ .comment.SUSE.OPTs
+                0x0000000000000000        0x5 kernel/interrupt.o
+ .comment.SUSE.OPTs
+                0x0000000000000005        0x5 kernel/i8259.o
+ .comment.SUSE.OPTs
+                0x000000000000000a        0x5 kernel/syscall.o
+ .comment.SUSE.OPTs
+                0x000000000000000f        0x5 kernel/buffer.o
+ .comment.SUSE.OPTs
+                0x0000000000000014        0x5 kernel/fork.o
+ .comment.SUSE.OPTs
+                0x0000000000000019        0x5 kernel/kernelt.o
+ .comment.SUSE.OPTs
+                0x000000000000001e        0x5 kernel/ktime.o
+ .comment.SUSE.OPTs
+                0x0000000000000023        0xa kernel/printf.o
+ .comment.SUSE.OPTs
+                0x000000000000002d        0x5 kernel/sched.o
+ .comment.SUSE.OPTs
+                0x0000000000000032        0x5 kernel/process.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/interrupt.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/i8259.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/syscall.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/buffer.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/fork.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/kernelt.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/ktime.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/printf.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/sched.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/process.o

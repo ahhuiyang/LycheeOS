@@ -1,0 +1,208 @@
+     1                                  ;***************************************************************************
+     2                                  ;
+     3                                  ;   string.asm-内存及字符串操作函数，应使用nasm编译
+     4                                  ;   Copyright (C) 2010 杨习辉
+     5                                   ;**************************************************************************
+     6                                   
+     7                                  global memcpy,memset,strlen,strchr
+     8                                  global set_bit,clear_bit,find_first_zero
+     9                                   
+    10                                   ;函数调用压栈图：
+    11                                   ;|-----------
+    12                                   ;  形参
+    13                                   ;|-----------
+    14                                   ; 返回地址
+    15                                   ;|-----------
+    16                                   ;ebp
+    17                                   ;|-----------
+    18                                   
+    19                                  ;char* memcpy(char* es:dst,char* ds:src,unsigned int count)
+    20                                  ;es和ds必须被设置好
+    21                                  ;----------------------------------------------------------------
+    22                                  memcpy:
+    23 00000000 55                          push    ebp
+    24 00000001 89E5                        mov     ebp,esp
+    25                                      
+    26 00000003 56                          push    esi
+    27 00000004 57                          push    edi
+    28 00000005 51                          push    ecx
+    29                                      
+    30 00000006 8B7508                      mov     esi,[ebp + 8]   ;dst
+    31 00000009 8B7D0C                      mov     edi,[ebp + 12]  ;src
+    32 0000000C 8B4D10                      mov     ecx,[ebp + 16]  ;size
+    33                                      
+    34 0000000F 83F900                      cmp     ecx,0           ;判断ecx是否大于0
+    35 00000012 7E02                        jle     label_memcpy_exit
+    36                                      
+    37 00000014 F3A4                        rep movsb
+    38                                      
+    39                                  label_memcpy_exit:
+    40 00000016 8B4508                      mov     eax,[ebp + 8]   ;dst,返回值    
+    41                                      
+    42 00000019 59                          pop     ecx
+    43 0000001A 5F                          pop     edi
+    44 0000001B 5E                          pop     esi
+    45 0000001C 89EC                        mov     esp,ebp
+    46 0000001E 5D                          pop     ebp
+    47                                      
+    48 0000001F C3                          ret
+    49                                  ;----------------------------------------------------------------
+    50                                  ;void *memset(void *s,char c,unsigned int count)
+    51                                  ;----------------------------------------------------------------
+    52                                  memset:
+    53 00000020 55                          push    ebp
+    54 00000021 89E5                        mov     ebp,esp
+    55                                      
+    56 00000023 8B7D08                      mov     edi,[ebp + 8]   ;s
+    57 00000026 8B450C                      mov     eax,[ebp + 12]  ;c
+    58 00000029 25FF000000                  and     eax,0xFF
+    59 0000002E 8B4D10                      mov     ecx,[ebp + 16]  ;count
+    60                                      
+    61 00000031 F3AA                        rep stosb               ;al->es:di until cx = 0
+    62                                      
+    63 00000033 8B4508                      mov     eax,[ebp + 8]   ;s,返回值
+    64 00000036 89EC                        mov     esp,ebp
+    65 00000038 5D                          pop     ebp
+    66                                      
+    67 00000039 C3                          ret
+    68                                  ;----------------------------------------------------------------
+    69                                  ;unsigned int strlen(char *str)，不包含末尾的0
+    70                                  ;----------------------------------------------------------------
+    71                                  strlen:
+    72 0000003A 55                          push    ebp
+    73 0000003B 89E5                        mov     ebp,esp
+    74                                      
+    75 0000003D 31C0                        xor     eax,eax         ;存放返回值
+    76 0000003F 8B7D08                      mov     edi,[ebp + 8]   ;s
+    77                                  .again:
+    78 00000042 833F00                      cmp     dword [edi],0
+    79 00000045 7404                        je      label_strlen_exit
+    80 00000047 40                          inc     eax
+    81 00000048 47                          inc     edi
+    82 00000049 E2F7                        loop    .again
+    83                                      
+    84                                  label_strlen_exit:
+    85 0000004B 89EC                        mov     esp,ebp
+    86 0000004D 5D                          pop     ebp
+    87                                      
+    88 0000004E C3                          ret
+    89                                  ;----------------------------------------------------------------
+    90                                  ;unsigned int strchr(char *str,char c,int len)
+    91                                  ;从0开始的位置，返回－1表示失败
+    92                                  ;----------------------------------------------------------------
+    93                                  strchr:
+    94 0000004F 55                          push    ebp
+    95 00000050 89E5                        mov     ebp,esp
+    96                                      
+    97 00000052 53                          push    ebx
+    98 00000053 51                          push    ecx
+    99                                      
+   100 00000054 31C0                        xor     eax,eax
+   101 00000056 31C9                        xor     ecx,ecx
+   102 00000058 31D2                        xor     edx,edx
+   103 0000005A 8B5D08                      mov     ebx,[ebp + 8]       ;str
+   104 0000005D 8A450C                      mov     al,[ebp + 12]       ;for scasb
+   105 00000060 8B4D10                      mov     ecx,[ebp + 16]      ;for scasb count
+   106                                      
+   107 00000063 FC                          cld
+   108 00000064 F3AE                        repe    scasb
+   109                                      
+   110 00000066 B8FFFFFFFF                  mov     eax,-1
+   111 0000006B 7568                        jne     label_exit
+   112 0000006D 8B4510                      mov     eax,[ebp + 16]      ;len
+   113 00000070 29C8                        sub     eax,ecx             ;len-ecx
+   114 00000072 48                          dec     eax                 ;len-ecx-1
+   115                                      
+   116 00000073 59                          pop     ecx
+   117 00000074 5B                          pop     ebx
+   118 00000075 89EC                        mov     esp,ebp
+   119 00000077 5D                          pop     ebp
+   120                                      
+   121 00000078 C3                          ret
+   122                                  ;----------------------------------------------------------------
+   123                                  ;int set_bit(void *addr,unsigned int nr)
+   124                                  ;设置比特位，返回源比特位，nr可以大于32
+   125                                  ;----------------------------------------------------------------
+   126                                  set_bit:
+   127 00000079 55                          push    ebp
+   128 0000007A 89E5                        mov     ebp,esp
+   129                                      
+   130 0000007C 53                          push    ebx
+   131 0000007D 52                          push    edx
+   132                                      
+   133 0000007E 31DB                        xor     ebx,ebx
+   134 00000080 31C0                        xor     eax,eax
+   135 00000082 8B5508                      mov     edx,[ebp + 8]       ;addr
+   136 00000085 8B5D0C                      mov     ebx,[ebp + 12]      ;nr
+   137 00000088 0FAB1A                      bts     [edx],ebx          ;设置[addr]中由ebx指定的位
+   138 0000008B 0F92C0                      setb    al                  ;set byte if cf = 1，这也是返回值
+   139                                      
+   140 0000008E 5A                          pop     edx
+   141 0000008F 5B                          pop     ebx
+   142 00000090 89EC                        mov     esp,ebp
+   143 00000092 5D                          pop     ebp
+   144                                      
+   145 00000093 C3                          ret
+   146                                  ;----------------------------------------------------------------
+   147                                  ;int clear_bit(void *addr,unsigned int nr)
+   148                                  ;清除比特位，返回原比特位，nr可以大于32
+   149                                  ;----------------------------------------------------------------
+   150                                  clear_bit:
+   151 00000094 55                          push    ebp
+   152 00000095 89E5                        mov     ebp,esp
+   153                                      
+   154 00000097 53                          push    ebx
+   155 00000098 52                          push    edx
+   156                                      
+   157 00000099 31DB                        xor     ebx,ebx
+   158 0000009B 31C0                        xor     eax,eax
+   159 0000009D 8B5508                      mov     edx,[ebp + 8]       ;addr
+   160 000000A0 8B5D0C                      mov     ebx,[ebp + 12]      ;nr
+   161 000000A3 0FB31A                      btr     [edx],ebx          ;清除[addr]中由ebx指定的位
+   162 000000A6 0F92C0                      setb    al                  ;set byte if cf = 1，这也是返回值
+   163                                      
+   164 000000A9 5A                          pop     edx
+   165 000000AA 5B                          pop     ebx
+   166 000000AB 89EC                        mov     esp,ebp
+   167 000000AD 5D                          pop     ebp
+   168                                      
+   169 000000AE C3                          ret
+   170                                  ;----------------------------------------------------------------
+   171                                  ;int find_first_zero(void *addr)
+   172                                  ;在一个数据块（1024字节，8192位）查找第一个是零的位的偏移
+   173                                  ;----------------------------------------------------------------
+   174                                  find_first_zero:
+   175 000000AF 55                          push    ebp
+   176 000000B0 89E5                        mov     ebp,esp
+   177                                      
+   178 000000B2 50                          push    eax
+   179 000000B3 51                          push    ecx
+   180 000000B4 52                          push    edx
+   181 000000B5 56                          push    esi
+   182                                      
+   183 000000B6 FC                          cld
+   184 000000B7 31C9                        xor     ecx,ecx
+   185 000000B9 31D2                        xor     edx,edx
+   186 000000BB 8B7508                      mov     esi,[ebp + 8]       ;addr
+   187                                  label_research:
+   188 000000BE AD                          lodsd                       ;取ds:esi -> eax，ds:esi + 4
+   189 000000BF F7D0                        not     eax                 ;取反
+   190 000000C1 0FBCD0                      bsf     edx,eax
+   191 000000C4 7404                        je      not_found           ;如果eax是全零，则ZF=1，表明没找到，跳转继续找
+   192 000000C6 01D1                        add     ecx,edx             ;ecx中存储偏移值
+   193 000000C8 EB0B                        jmp     label_exit
+   194                                  not_found:
+   195 000000CA 83C120                      add     ecx,32
+   196 000000CD 81F900200000                cmp     ecx,8192
+   197 000000D3 72E9                        jb      label_research
+   198                                  
+   199                                  label_exit:
+   200 000000D5 89C8                        mov     eax,ecx             ;返回值，如果成果，返回结果小于8192，否则失败
+   201 000000D7 5E                          pop     esi
+   202 000000D8 5A                          pop     edx
+   203 000000D9 59                          pop     ecx
+   204 000000DA 58                          pop     eax
+   205 000000DB 89EC                        mov     esp,ebp
+   206 000000DD 5D                          pop     ebp
+   207                                      
+   208 000000DE C3                          ret

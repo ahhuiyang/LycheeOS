@@ -1,0 +1,316 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD kernel/blk/hd.o
+LOAD kernel/blk/rw_blk.o
+LOAD kernel/blk/blkc.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x0000000000000000      0xcda
+ *(.text .stub)
+ .text          0x0000000000000000      0x96c kernel/blk/hd.o
+                0x0000000000000571                int_unexpected_hd
+                0x0000000000000000                irq_hd_handler
+                0x000000000000000f                hd_init
+                0x000000000000071e                do_hd_request
+ .text          0x000000000000096c      0x2d8 kernel/blk/rw_blk.o
+                0x0000000000000aad                rw_blk
+                0x0000000000000c0e                blk_dev_init
+ .text          0x0000000000000c44       0x96 kernel/blk/blkc.o
+                0x0000000000000c44                end_request
+ *(.gnu.warning)
+
+.fini
+ *(.fini)
+
+.rodata         0x0000000000000000      0x140
+ *(.rodata)
+ .rodata        0x0000000000000000      0x105 kernel/blk/hd.o
+ *fill*         0x0000000000000105        0x3 00
+ .rodata        0x0000000000000108       0x21 kernel/blk/rw_blk.o
+ .rodata        0x0000000000000129       0x17 kernel/blk/blkc.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+.fini_array
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.got.plt
+ *(.got.plt)
+
+.data           0x0000000000000000        0x0
+ *(.data)
+ .data          0x0000000000000000        0x0 kernel/blk/hd.o
+ .data          0x0000000000000000        0x0 kernel/blk/rw_blk.o
+ .data          0x0000000000000000        0x0 kernel/blk/blkc.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000       0x20
+ *(.dynbss)
+ *(.bss)
+ .bss           0x0000000000000000       0x1c kernel/blk/hd.o
+                0x0000000000000000                hd
+ .bss           0x000000000000001c        0x4 kernel/blk/rw_blk.o
+ .bss           0x0000000000000020        0x0 kernel/blk/blkc.o
+ *(COMMON)
+ COMMON         0x0000000000000020        0x0 kernel/blk/hd.o
+ COMMON         0x0000000000000020        0x0 kernel/blk/blkc.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0xae
+ *(.comment)
+ .comment       0x0000000000000000       0x3a kernel/blk/hd.o
+ .comment       0x000000000000003a       0x3a kernel/blk/rw_blk.o
+ .comment       0x0000000000000074       0x3a kernel/blk/blkc.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+OUTPUT(kernel/blk/blk.o elf32-i386)
+
+.comment.SUSE.OPTs
+                0x0000000000000000        0xf
+ .comment.SUSE.OPTs
+                0x0000000000000000        0x5 kernel/blk/hd.o
+ .comment.SUSE.OPTs
+                0x0000000000000005        0x5 kernel/blk/rw_blk.o
+ .comment.SUSE.OPTs
+                0x000000000000000a        0x5 kernel/blk/blkc.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/blk/hd.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/blk/rw_blk.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/blk/blkc.o

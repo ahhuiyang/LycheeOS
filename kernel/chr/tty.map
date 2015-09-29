@@ -1,0 +1,331 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD kernel/chr/keyboard.o
+LOAD kernel/chr/console.o
+LOAD kernel/chr/ttyc.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x0000000000000000     0x1956
+ *(.text .stub)
+ .text          0x0000000000000000      0x874 kernel/chr/keyboard.o
+                0x0000000000000000                irq_keyboard_handler
+                0x00000000000001b7                keyboard_read
+                0x0000000000000054                init_keyboard
+ .text          0x0000000000000874      0xae0 kernel/chr/console.o
+                0x000000000000088d                set_console_origin
+                0x0000000000000b28                scroll_down
+                0x0000000000001196                console_init
+                0x0000000000000874                set_current_console
+                0x00000000000010d4                console_write
+                0x0000000000000a60                scroll_up
+ .text          0x0000000000001354      0x602 kernel/chr/ttyc.o
+                0x00000000000017ff                set_current_tty
+                0x00000000000015c3                tty_read
+                0x0000000000001472                get_key_from_tty_read
+                0x000000000000168f                task_tty
+                0x00000000000013db                put_key_to_tty_write
+                0x0000000000001633                tty_write
+                0x00000000000014d2                get_char_from_write
+                0x00000000000017f0                release_tty
+                0x0000000000001354                put_key_to_tty_read
+                0x00000000000018a3                init_tty
+                0x00000000000016c7                get_empty_tty
+                0x000000000000144b                put_char_to_tty_write
+                0x000000000000182a                sys_key_process
+                0x00000000000015a5                is_current_tty
+ *(.gnu.warning)
+
+.fini
+ *(.fini)
+
+.rodata         0x0000000000000000       0x24
+ *(.rodata)
+ .rodata        0x0000000000000000       0x24 kernel/chr/keyboard.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+.fini_array
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.got.plt
+ *(.got.plt)
+
+.data           0x0000000000000000      0x644
+ *(.data)
+ .data          0x0000000000000000      0x640 kernel/chr/keyboard.o
+                0x0000000000000600                numpad_map
+                0x0000000000000000                keymap
+ .data          0x0000000000000640        0x1 kernel/chr/console.o
+ *fill*         0x0000000000000641        0x3 00
+ .data          0x0000000000000644        0x0 kernel/chr/ttyc.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000       0x60
+ *(.dynbss)
+ *(.bss)
+ .bss           0x0000000000000000       0x4c kernel/chr/keyboard.o
+ .bss           0x000000000000004c       0x14 kernel/chr/console.o
+ .bss           0x0000000000000060        0x0 kernel/chr/ttyc.o
+ *(COMMON)
+ COMMON         0x0000000000000060        0x0 kernel/chr/keyboard.o
+ COMMON         0x0000000000000060        0x0 kernel/chr/ttyc.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0xae
+ *(.comment)
+ .comment       0x0000000000000000       0x3a kernel/chr/keyboard.o
+ .comment       0x000000000000003a       0x3a kernel/chr/console.o
+ .comment       0x0000000000000074       0x3a kernel/chr/ttyc.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+OUTPUT(kernel/chr/tty.o elf32-i386)
+
+.comment.SUSE.OPTs
+                0x0000000000000000        0xf
+ .comment.SUSE.OPTs
+                0x0000000000000000        0x5 kernel/chr/keyboard.o
+ .comment.SUSE.OPTs
+                0x0000000000000005        0x5 kernel/chr/console.o
+ .comment.SUSE.OPTs
+                0x000000000000000a        0x5 kernel/chr/ttyc.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/chr/keyboard.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/chr/console.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 kernel/chr/ttyc.o

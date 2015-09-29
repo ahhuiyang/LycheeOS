@@ -1,0 +1,45 @@
+     1                                  ;***************************************************************************
+     2                                  ;
+     3                                  ;   pf.asm-page fault中断处理函数(int 14)
+     4                                  ;   Copyright (C) 2010 杨习辉
+     5                                  ;***************************************************************************
+     6                                  
+     7                                  ;中断时的堆栈情况请参考kernel/interrupt.asm中的注释
+     8                                  
+     9                                  ;memory.c中的do_wp_page和do_no_page函数
+    10                                  extern do_wp_page
+    11                                  extern do_no_page
+    12                                  
+    13                                  ;导出中断处理函数
+    14                                  global page_fault
+    15                                  
+    16                                  page_fault:
+    17 00000000 870424                      xchg    eax,[esp]       ;将出错码交换到eax，实际就是出错的3个标志位
+    18 00000003 51                          push    ecx
+    19 00000004 52                          push    edx
+    20 00000005 1E                          push    ds
+    21 00000006 06                          push    es
+    22 00000007 0FA0                        push    fs
+    23 00000009 0FA8                        push    gs
+    24 0000000B 0F20D2                      mov     edx,cr2
+    25 0000000E 52                          push    edx             ;address,线性地址
+    26 0000000F 50                          push    eax             ;err_code,出错码
+    27                                      
+    28 00000010 A901000000                  test    eax,1           ;测试p位，如果为零，则是缺页异常，否则跳转
+    29 00000015 7507                        jnz     wp_page         ;上述and操作结果不为零，也就是说P位为1，则跳
+    30 00000017 E8(00000000)                call    do_no_page
+    31 0000001C EB05                        jmp     label_exit
+    32                                      
+    33                                  wp_page:
+    34 0000001E E8(00000000)                call    do_wp_page
+    35                                      
+    36                                  label_exit:
+    37 00000023 83C408                      add     esp,8           ;压入堆栈的两个参数
+    38 00000026 0FA9                        pop     gs
+    39 00000028 0FA1                        pop     fs
+    40 0000002A 07                          pop     es
+    41 0000002B 1F                          pop     ds
+    42 0000002C 5A                          pop     edx
+    43 0000002D 59                          pop     ecx
+    44 0000002E 58                          pop     eax
+    45 0000002F CF                          iret

@@ -1,0 +1,213 @@
+     1                                  ;***************************************************************************
+     2                                  ;
+     3                                  ;   interrupt.asm-int0-int16中断处理接口
+     4                                  ;   Copyright (C) 2010 杨习辉
+     5                                  ;***************************************************************************
+     6                                  
+     7                                  ;无出错号，无特权级变化堆栈如下
+     8                                  ; |-----------|                        
+     9                                  ; eflags
+    10                                  ; |-----------|
+    11                                  ; cs
+    12                                  ; |-----------|
+    13                                  ; eip        <--esp
+    14                                  ; |-----------|
+    15                                  
+    16                                  ;有出错号，无特权级变化，堆栈如下：
+    17                                  
+    18                                  
+    19                                  ;没有出错号，有特权级变化，堆栈如下：
+    20                                  ; |-----------|
+    21                                  ; ss(外层)
+    22                                  ; |-----------|
+    23                                  ; esp(外层)
+    24                                  ; |-----------|
+    25                                  ; eflags
+    26                                  ; |-----------|
+    27                                  ; cs
+    28                                  ; |-----------|
+    29                                  ; eip        <--esp
+    30                                  ; |-----------|
+    31                                  
+    32                                  ;有出错号，有特权级变化，堆栈如下：
+    33                                  ; |-----------|
+    34                                  ; ss(外层)
+    35                                  ; |-----------|
+    36                                  ; esp(外层)
+    37                                  ; |-----------|
+    38                                  ; eflags
+    39                                  ; |-----------|
+    40                                  ; cs
+    41                                  ; |-----------|
+    42                                  ; eip
+    43                                  ; |-----------|
+    44                                  ; error code <--esp
+    45                                  ; |-----------|
+    46                                  
+    47                                  ;外部符号，这些中断真实的处理函数
+    48                                  ;每个中断一个处理函数可以让中断变得比较强大
+    49                                  ;这些函数在interrupt.c中实现                                          ;向量号      描述                      类型                      出错码 
+    50                                  extern do_divide_error                  ;0      除法错                 fault       无
+    51                                  extern do_single_step                   ;1      调试异常            falut\trap  无 
+    52                                  extern do_nmi                           ;2      非屏蔽中断        interrupt   无
+    53                                  extern do_int3                          ;3      int3       trap        无
+    54                                  extern do_overflow                      ;4      溢出                     trap        无
+    55                                  extern do_bounds_check                  ;5      越界                     fault       无
+    56                                  extern do_invalid_opcode                ;6      无效操作码        fault       无
+    57                                  extern do_coprocessor_not_avl           ;7      无数学协处理器fault       无
+    58                                  extern do_double_fault                  ;8      双重错误             abort      有(0)
+    59                                  extern do_coprocessor_seg_overrun       ;9      协处理器段越界fault       无
+    60                                  extern do_invalid_tss                   ;10     无效的TSS   fault       有
+    61                                  extern do_seg_not_present               ;11     段不存在             fault       有
+    62                                  extern do_stack_exception               ;12     堆栈错误             fault       有
+    63                                  extern do_general_protection            ;13     常规保护错误     fault       有
+    64                                  extern do_page_fault                    ;14     页错误                  fault       有
+    65                                  extern do_coprocessor_error             ;16     x87FPU错          fault       无
+    66                                  extern do_reserved                      ;暂时没有中断处理程序的函数执行此函数
+    67                                  
+    68                                  ;导出符号,中断的最外层
+    69                                  global divide_error,single_step,nmi,int3,overflow
+    70                                  global bounds_check,invalid_opcode,coprocessor_not_avl
+    71                                  global double_fault,coprocessor_seg_overrun,invalid_tss,seg_not_present
+    72                                  global stack_exception,general_protection,coprocessor_error
+    73                                  global reserved
+    74                                  
+    75                                  divide_error:
+    76 00000000 68[00000000]                push    do_divide_error
+    77 00000005 EB69                        jmp     no_error_code
+    78                                  
+    79                                  single_step:
+    80 00000007 68[00000000]                push    do_single_step
+    81 0000000C EB62                        jmp     no_error_code
+    82                                  nmi:
+    83 0000000E 68[00000000]                push    do_nmi
+    84 00000013 EB5B                        jmp     no_error_code
+    85                                  int3:
+    86 00000015 68[00000000]                push    do_int3
+    87 0000001A EB54                        jmp     no_error_code
+    88                                  overflow:
+    89 0000001C 68[00000000]                push    do_overflow
+    90 00000021 EB4D                        jmp     no_error_code
+    91                                  bounds_check:
+    92 00000023 68[00000000]                push    do_bounds_check
+    93 00000028 EB46                        jmp     no_error_code
+    94                                  invalid_opcode:
+    95 0000002A 68[00000000]                push    do_invalid_opcode
+    96 0000002F EB3F                        jmp     no_error_code
+    97                                  coprocessor_not_avl:
+    98 00000031 68[00000000]                push    do_coprocessor_not_avl
+    99 00000036 EB38                        jmp     no_error_code
+   100                                  double_fault:
+   101 00000038 68[00000000]                push    do_double_fault
+   102 0000003D EB71                        jmp     error_code
+   103                                  coprocessor_seg_overrun:
+   104 0000003F 68[00000000]                push    do_coprocessor_seg_overrun
+   105 00000044 EB2A                        jmp     no_error_code
+   106                                  invalid_tss:
+   107 00000046 68[00000000]                push    do_invalid_tss
+   108 0000004B EB63                        jmp     error_code
+   109                                  seg_not_present:
+   110 0000004D 68[00000000]                push    do_seg_not_present
+   111 00000052 EB5C                        jmp     error_code
+   112                                  stack_exception:
+   113 00000054 68[00000000]                push    do_stack_exception
+   114 00000059 EB55                        jmp     error_code
+   115                                  general_protection:
+   116 0000005B 68[00000000]                push    do_general_protection
+   117 00000060 EB4E                        jmp     error_code
+   118                                  coprocessor_error:
+   119 00000062 68[00000000]                push    do_coprocessor_error
+   120 00000067 EB07                        jmp     no_error_code
+   121                                  reserved:
+   122 00000069 68[00000000]                push    do_reserved
+   123 0000006E EB00                        jmp     no_error_code
+   124                                      
+   125                                  ;下面的代码分为两种,有出错码和无出错码
+   126                                  ;无出错码
+   127                                  no_error_code:
+   128 00000070 870424                      xchg    eax,[esp]           ;将中断处理程序地址放入eax， 并将eax入栈
+   129 00000073 53                          push    ebx
+   130 00000074 51                          push    ecx
+   131 00000075 52                          push    edx
+   132 00000076 56                          push    esi
+   133 00000077 57                          push    edi
+   134 00000078 55                          push    ebp
+   135 00000079 1E                          push    ds
+   136 0000007A 06                          push    es
+   137 0000007B 16                          push    ss
+   138 0000007C 0FA0                        push    fs
+   139 0000007E 0FA8                        push    gs
+   140                                      
+   141                                      ;将这些段寄存器指向内核，gs留为用户进程与内核通信用
+   142 00000080 50                          push    eax
+   143 00000081 B810000000                  mov     eax,0x10
+   144 00000086 8ED8                        mov     ds,ax
+   145 00000088 8EC0                        mov     es,ax
+   146 0000008A 8EE0                        mov     fs,ax
+   147 0000008C B817000000                  mov     eax,0x17
+   148 00000091 8EE8                        mov     gs,ax
+   149 00000093 58                          pop     eax
+   150                                      
+   151 00000094 6AFF                        push    0xffffffff          ;没有出错码，随便填充一个
+   152 00000096 89E2                        mov     edx,esp
+   153 00000098 83C234                      add     edx,4 * 13
+   154 0000009B 52                          push    edx                 ;错误处理程序可以根据此值找出执行代码的CS:EIP,EFLAGS,SS:ESP
+   155 0000009C FFD0                        call    eax
+   156 0000009E 83C408                      add     esp,8               ;指向gs入栈处
+   157 000000A1 0FA9                        pop     gs
+   158 000000A3 0FA1                        pop     fs
+   159 000000A5 17                          pop     ss
+   160 000000A6 07                          pop     es
+   161 000000A7 1F                          pop     ds
+   162 000000A8 5D                          pop     ebp
+   163 000000A9 5F                          pop     edi
+   164 000000AA 5E                          pop     esi
+   165 000000AB 5A                          pop     edx
+   166 000000AC 59                          pop     ecx
+   167 000000AD 5B                          pop     ebx
+   168 000000AE 58                          pop     eax
+   169 000000AF CF                          iret
+   170                                      
+   171                                  error_code:
+   172 000000B0 87442404                    xchg    eax,[esp + 4]           ;将出错号放入eax， 并将eax入栈
+   173 000000B4 871C24                      xchg    ebx,[esp]
+   174 000000B7 51                          push    ecx
+   175 000000B8 52                          push    edx
+   176 000000B9 56                          push    esi
+   177 000000BA 57                          push    edi
+   178 000000BB 55                          push    ebp
+   179 000000BC 1E                          push    ds
+   180 000000BD 06                          push    es
+   181 000000BE 16                          push    ss
+   182 000000BF 0FA0                        push    fs
+   183 000000C1 0FA8                        push    gs
+   184                                      
+   185                                      ;将这些段寄存器指向内核，gs留为用户进程与内核通信用
+   186 000000C3 50                          push    eax
+   187 000000C4 B810000000                  mov     eax,0x10
+   188 000000C9 8ED8                        mov     ds,ax
+   189 000000CB 8EC0                        mov     es,ax
+   190 000000CD 8EE0                        mov     fs,ax
+   191 000000CF B817000000                  mov     eax,0x17
+   192 000000D4 8EE8                        mov     gs,ax
+   193 000000D6 58                          pop     eax
+   194                                      
+   195 000000D7 50                          push    eax                 ;没有出错码，随便填充一个
+   196 000000D8 89E2                        mov     edx,esp
+   197 000000DA 83C234                      add     edx,4*13
+   198 000000DD 52                          push    edx                 ;错误处理程序可以根据此值找出执行代码的CS:EIP,EFLAGS,SS:ESP
+   199 000000DE FFD3                        call    ebx
+   200 000000E0 83C408                      add     esp,8               ;指向gs入栈处
+   201 000000E3 0FA9                        pop     gs
+   202 000000E5 0FA1                        pop     fs
+   203 000000E7 17                          pop     ss
+   204 000000E8 07                          pop     es
+   205 000000E9 1F                          pop     ds
+   206 000000EA 5D                          pop     ebp
+   207 000000EB 5F                          pop     edi
+   208 000000EC 5E                          pop     esi
+   209 000000ED 5A                          pop     edx
+   210 000000EE 59                          pop     ecx
+   211 000000EF 5B                          pop     ebx
+   212 000000F0 58                          pop     eax
+   213 000000F1 CF                          iret

@@ -1,0 +1,405 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD fs/bitmap.o
+LOAD fs/super.o
+LOAD fs/inode.o
+LOAD fs/truncate.o
+LOAD fs/namei.o
+LOAD fs/file.o
+LOAD fs/block_dev.o
+LOAD fs/chr_dev.o
+LOAD fs/file_dev.o
+LOAD fs/rw.o
+
+.interp
+ *(.interp)
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash
+ *(.hash)
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+
+.rela.text
+ *(.rela.text)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+
+.rela.rodata
+ *(.rela.rodata)
+
+.rel.data.rel.ro
+ *(.rel.data.rel.ro)
+
+.rela.data.rel.ro
+ *(.rela.data.rel.ro)
+
+.rel.data
+ *(.rel.data)
+
+.rela.data
+ *(.rela.data)
+
+.rel.tdata
+ *(.rel.tdata)
+
+.rela.tdata
+ *(.rela.tdata)
+
+.rel.tbss
+ *(.rel.tbss)
+
+.rela.tbss
+ *(.rela.tbss)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.init
+ *(.init)
+
+.plt
+ *(.plt)
+
+.text           0x0000000000000000     0x28a3
+ *(.text .stub)
+ .text          0x0000000000000000      0x60b fs/bitmap.o
+                0x000000000000047e                new_inode
+                0x00000000000002ec                free_inode
+                0x000000000000014f                new_block
+                0x0000000000000000                free_block
+ *fill*         0x000000000000060b        0x1 90909090
+ .text          0x000000000000060c      0x418 fs/super.o
+                0x0000000000000676                get_super
+                0x00000000000006d5                put_super
+ .text          0x0000000000000a24      0xc55 fs/inode.o
+                0x0000000000001142                get_empty_inode
+                0x0000000000001034                ib_map_new
+                0x000000000000124b                get_inode
+                0x0000000000000b18                sync_inodes
+                0x0000000000001056                put_inode
+                0x0000000000000a8e                invalid_inodes
+                0x0000000000001012                ib_map
+ *fill*         0x0000000000001679        0x3 90909090
+ .text          0x000000000000167c      0x22d fs/truncate.o
+                0x000000000000178c                truncate
+ *fill*         0x00000000000018a9        0x3 90909090
+ .text          0x00000000000018ac      0x8ca fs/namei.o
+                0x0000000000002074                namei
+ *fill*         0x0000000000002176        0x2 90909090
+ .text          0x0000000000002178        0x0 fs/file.o
+ .text          0x0000000000002178      0x1c3 fs/block_dev.o
+                0x0000000000002178                block_write
+                0x000000000000225d                block_read
+ *fill*         0x000000000000233b        0x1 90909090
+ .text          0x000000000000233c       0x6e fs/chr_dev.o
+                0x0000000000002373                chr_read
+                0x000000000000233c                chr_write
+ *fill*         0x00000000000023aa        0x2 90909090
+ .text          0x00000000000023ac      0x2d9 fs/file_dev.o
+                0x00000000000023ac                file_write
+                0x0000000000002562                file_read
+ *fill*         0x0000000000002685        0x3 90909090
+ .text          0x0000000000002688      0x21b fs/rw.o
+                0x0000000000002796                sys_read
+                0x0000000000002688                sys_write
+ *(.gnu.warning)
+
+.fini
+ *(.fini)
+
+.rodata         0x0000000000000000      0x3b3
+ *(.rodata)
+ .rodata        0x0000000000000000      0x255 fs/bitmap.o
+ .rodata        0x0000000000000255       0x38 fs/super.o
+ *fill*         0x000000000000028d        0x3 00
+ .rodata        0x0000000000000290       0xcd fs/inode.o
+ *fill*         0x000000000000035d        0x3 00
+ .rodata        0x0000000000000360       0x53 fs/namei.o
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.tdata
+ *(.tdata)
+
+.tbss
+ *(.tbss)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array
+ *(SORT(.init_array.*))
+ *(.init_array)
+
+.fini_array
+ *(.fini_array)
+ *(SORT(.fini_array.*))
+
+.jcr
+ *(.jcr)
+
+.dynamic
+ *(.dynamic)
+
+.got
+ *(.got)
+
+.got.plt
+ *(.got.plt)
+
+.data           0x0000000000000000        0x0
+ *(.data)
+ .data          0x0000000000000000        0x0 fs/bitmap.o
+ .data          0x0000000000000000        0x0 fs/super.o
+ .data          0x0000000000000000        0x0 fs/inode.o
+ .data          0x0000000000000000        0x0 fs/truncate.o
+ .data          0x0000000000000000        0x0 fs/namei.o
+ .data          0x0000000000000000        0x0 fs/file.o
+ .data          0x0000000000000000        0x0 fs/block_dev.o
+ .data          0x0000000000000000        0x0 fs/chr_dev.o
+ .data          0x0000000000000000        0x0 fs/file_dev.o
+ .data          0x0000000000000000        0x0 fs/rw.o
+
+.data1
+ *(.data1)
+
+.bss            0x0000000000000000        0x0
+ *(.dynbss)
+ *(.bss)
+ .bss           0x0000000000000000        0x0 fs/bitmap.o
+ .bss           0x0000000000000000        0x0 fs/super.o
+ .bss           0x0000000000000000        0x0 fs/inode.o
+ .bss           0x0000000000000000        0x0 fs/truncate.o
+ .bss           0x0000000000000000        0x0 fs/namei.o
+ .bss           0x0000000000000000        0x0 fs/file.o
+ .bss           0x0000000000000000        0x0 fs/block_dev.o
+ .bss           0x0000000000000000        0x0 fs/chr_dev.o
+ .bss           0x0000000000000000        0x0 fs/file_dev.o
+ .bss           0x0000000000000000        0x0 fs/rw.o
+ *(COMMON)
+ COMMON         0x0000000000000000        0x0 fs/bitmap.o
+ COMMON         0x0000000000000000        0x0 fs/super.o
+ COMMON         0x0000000000000000        0x0 fs/inode.o
+ COMMON         0x0000000000000000        0x0 fs/file.o
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x244
+ *(.comment)
+ .comment       0x0000000000000000       0x3a fs/bitmap.o
+ .comment       0x000000000000003a       0x3a fs/super.o
+ .comment       0x0000000000000074       0x3a fs/inode.o
+ .comment       0x00000000000000ae       0x3a fs/truncate.o
+ .comment       0x00000000000000e8       0x3a fs/namei.o
+ .comment       0x0000000000000122       0x3a fs/file.o
+ .comment       0x000000000000015c       0x3a fs/block_dev.o
+ .comment       0x0000000000000196       0x3a fs/chr_dev.o
+ .comment       0x00000000000001d0       0x3a fs/file_dev.o
+ .comment       0x000000000000020a       0x3a fs/rw.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+OUTPUT(fs/fs.o elf32-i386)
+
+.comment.SUSE.OPTs
+                0x0000000000000000       0x32
+ .comment.SUSE.OPTs
+                0x0000000000000000        0x5 fs/bitmap.o
+ .comment.SUSE.OPTs
+                0x0000000000000005        0x5 fs/super.o
+ .comment.SUSE.OPTs
+                0x000000000000000a        0x5 fs/inode.o
+ .comment.SUSE.OPTs
+                0x000000000000000f        0x5 fs/truncate.o
+ .comment.SUSE.OPTs
+                0x0000000000000014        0x5 fs/namei.o
+ .comment.SUSE.OPTs
+                0x0000000000000019        0x5 fs/file.o
+ .comment.SUSE.OPTs
+                0x000000000000001e        0x5 fs/block_dev.o
+ .comment.SUSE.OPTs
+                0x0000000000000023        0x5 fs/chr_dev.o
+ .comment.SUSE.OPTs
+                0x0000000000000028        0x5 fs/file_dev.o
+ .comment.SUSE.OPTs
+                0x000000000000002d        0x5 fs/rw.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 fs/bitmap.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fs/super.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fs/inode.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fs/truncate.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fs/namei.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fs/file.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fs/block_dev.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fs/chr_dev.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fs/file_dev.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 fs/rw.o
