@@ -1,0 +1,1070 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ADDR_PG_DIR	.\mm\memory.c	35;"	d	file:
+ADDR_PG_TBL	.\mm\memory.c	36;"	d	file:
+ALT_L	.\include\keyboard.h	56;"	d
+ALT_R	.\include\keyboard.h	57;"	d
+APPS	.\include\keyboard.h	49;"	d
+B	.\include\memory.h	16;"	d
+BACKSPACE	.\include\keyboard.h	45;"	d
+BLOCK_SIZE	.\include\blk.h	37;"	d
+BLOCK_SIZE_BITS	.\include\blk.h	38;"	d
+CAPS_LOCK	.\include\keyboard.h	60;"	d
+CHAR_SPACE	.\include\string.h	13;"	d
+CRT_ADDR_REG	.\include\const.h	24;"	d
+CRT_CGA_MEM_SIZE	.\include\const.h	23;"	d
+CRT_DATA_REG	.\include\const.h	25;"	d
+CRT_EGA_MEM_SIZE	.\include\const.h	21;"	d
+CRT_MEM_START	.\include\const.h	20;"	d
+CRT_VGA_MEM_SIZE	.\include\const.h	22;"	d
+CTRL_L	.\include\keyboard.h	54;"	d
+CTRL_R	.\include\keyboard.h	55;"	d
+CURRENT_TIME	.\include\kernel.h	146;"	d
+DATA_MAP_SLOTS	.\include\fconst.h	16;"	d
+DATA_NO	.\include\blk.h	33;"	d
+DATA_YES	.\include\blk.h	34;"	d
+DAY	.\include\time.h	15;"	d
+DELETE	.\include\keyboard.h	82;"	d
+DESC_LDT	.\include\kernel.h	54;"	d
+DESC_TSS	.\include\kernel.h	55;"	d
+DIRS_PER_BLOCK	.\include\fconst.h	12;"	d
+DOWNARROW	.\include\keyboard.h	88;"	d
+DPL_0	.\include\kernel.h	44;"	d
+DPL_1	.\include\kernel.h	45;"	d
+DPL_2	.\include\kernel.h	46;"	d
+DPL_3	.\include\kernel.h	47;"	d
+END	.\include\keyboard.h	84;"	d
+ENTER	.\include\keyboard.h	44;"	d
+ESC	.\include\keyboard.h	42;"	d
+EXT_MEMORY	.\init\kmain.c	24;"	d	file:
+F1	.\include\keyboard.h	65;"	d
+F10	.\include\keyboard.h	74;"	d
+F11	.\include\keyboard.h	75;"	d
+F12	.\include\keyboard.h	76;"	d
+F2	.\include\keyboard.h	66;"	d
+F3	.\include\keyboard.h	67;"	d
+F4	.\include\keyboard.h	68;"	d
+F5	.\include\keyboard.h	69;"	d
+F6	.\include\keyboard.h	70;"	d
+F7	.\include\keyboard.h	71;"	d
+F8	.\include\keyboard.h	72;"	d
+F9	.\include\keyboard.h	73;"	d
+FALSE	.\include\type.h	52;"	d
+FILE_CTL_ACCESS	.\include\ftype.h	24;"	d
+FILE_CTL_APPEND	.\include\ftype.h	42;"	d
+FILE_CTL_CREATE	.\include\ftype.h	39;"	d
+FILE_CTL_EXCL	.\include\ftype.h	40;"	d
+FILE_CTL_EXEC	.\include\ftype.h	31;"	d
+FILE_CTL_OPR	.\include\ftype.h	25;"	d
+FILE_CTL_READONLY	.\include\ftype.h	28;"	d
+FILE_CTL_RW	.\include\ftype.h	30;"	d
+FILE_CTL_TRUNC	.\include\ftype.h	41;"	d
+FILE_CTL_WRITEONLY	.\include\ftype.h	29;"	d
+FILE_TYPE	.\include\ftype.h	11;"	d
+FILE_TYPE_BLK	.\include\ftype.h	13;"	d
+FILE_TYPE_CHR	.\include\ftype.h	12;"	d
+FILE_TYPE_DIR	.\include\ftype.h	14;"	d
+FILE_TYPE_NORMAL	.\include\ftype.h	15;"	d
+FS_POS_BOOT	.\include\fconst.h	19;"	d
+FS_POS_SUPER	.\include\fconst.h	20;"	d
+GATE_CALL	.\include\kernel.h	50;"	d
+GATE_INT	.\include\kernel.h	51;"	d
+GATE_TASK	.\include\kernel.h	49;"	d
+GATE_TRAP	.\include\kernel.h	52;"	d
+GB	.\include\memory.h	19;"	d
+GDT_LEN	.\boot\oshead.asm	/^GDT_LEN     equ $-sys_gdt$/;"	d
+GDT_SIZE	.\include\kernel.h	17;"	d
+GUI_L	.\include\keyboard.h	47;"	d
+GUI_R	.\include\keyboard.h	48;"	d
+HD_CMD_DIAGNOSE	.\include\hd.h	45;"	d
+HD_CMD_FORMAT	.\include\hd.h	42;"	d
+HD_CMD_INIT	.\include\hd.h	43;"	d
+HD_CMD_READ	.\include\hd.h	39;"	d
+HD_CMD_REG	.\include\hd.h	20;"	d
+HD_CMD_RESET	.\include\hd.h	38;"	d
+HD_CMD_SEEK	.\include\hd.h	44;"	d
+HD_CMD_SPECIFY	.\include\hd.h	46;"	d
+HD_CMD_VERIFY	.\include\hd.h	41;"	d
+HD_CMD_WRITE	.\include\hd.h	40;"	d
+HD_CTL_REG	.\include\hd.h	21;"	d
+HD_CURRENT_REG	.\include\hd.h	18;"	d
+HD_DATA_REG	.\include\hd.h	11;"	d
+HD_DRIVER_INFO	.\init\kmain.c	25;"	d	file:
+HD_ERROR_REG	.\include\hd.h	12;"	d
+HD_HCYL_REG	.\include\hd.h	17;"	d
+HD_LCYL_REG	.\include\hd.h	16;"	d
+HD_NSECTOR_REG	.\include\hd.h	14;"	d
+HD_PRECOMP_REG	.\include\hd.h	13;"	d
+HD_SECTOR_REG	.\include\hd.h	15;"	d
+HD_STATE_BUSY	.\include\hd.h	35;"	d
+HD_STATE_DRIVER_ERR	.\include\hd.h	33;"	d
+HD_STATE_DRQ	.\include\hd.h	31;"	d
+HD_STATE_ECC	.\include\hd.h	26;"	d
+HD_STATE_ERROR	.\include\hd.h	24;"	d
+HD_STATE_INDEX	.\include\hd.h	25;"	d
+HD_STATE_READY	.\include\hd.h	34;"	d
+HD_STATE_REG	.\include\hd.h	19;"	d
+HD_STATE_SEEK_END	.\include\hd.h	32;"	d
+HOME	.\include\keyboard.h	83;"	d
+HOUR	.\include\time.h	14;"	d
+HZ	.\include\time.h	24;"	d
+I8259_MASTER_CTL	.\include\const.h	44;"	d
+I8259_MASTER_MASK	.\include\const.h	45;"	d
+I8259_SLAVE_CTL	.\include\const.h	46;"	d
+I8259_SLAVE_MASK	.\include\const.h	47;"	d
+IDT_LEN	.\boot\oshead.asm	/^IDT_LEN equ $-sys_idt$/;"	d
+IDT_SIZE	.\include\kernel.h	18;"	d
+INDEX_GDT_CS	.\include\kernel.h	32;"	d
+INDEX_GDT_DS	.\include\kernel.h	33;"	d
+INDEX_GDT_LDT	.\include\kernel.h	34;"	d
+INDEX_GDT_NULL	.\include\kernel.h	31;"	d
+INDEX_GDT_TSS	.\include\kernel.h	35;"	d
+INDEX_LEVEL1	.\include\fs.h	44;"	d
+INDEX_LEVEL2	.\include\fs.h	45;"	d
+INDEX_USER_CS	.\include\kernel.h	36;"	d
+INDEX_USER_DS	.\include\kernel.h	37;"	d
+INITSEG	.\boot\loader.asm	/^INITSEG         equ     0x07c0$/;"	d
+INODES_PER_BLOCK	.\include\fconst.h	11;"	d
+INODE_MAP_SLOTS	.\include\fconst.h	15;"	d
+INSERT	.\include\keyboard.h	81;"	d
+INT_HANDLER	.\boot\oshead.asm	/^INT_HANDLER     equ null_int - $\$$/;"	d
+INT_IRQ0	.\include\const.h	50;"	d
+INT_IRQ8	.\include\const.h	51;"	d
+IRQ_CASCADE	.\include\interrupt.h	34;"	d
+IRQ_CLOCK	.\include\interrupt.h	32;"	d
+IRQ_COM1	.\include\interrupt.h	36;"	d
+IRQ_COM2	.\include\interrupt.h	35;"	d
+IRQ_FLOPPY	.\include\interrupt.h	38;"	d
+IRQ_HD	.\include\interrupt.h	41;"	d
+IRQ_KEYBOARD	.\include\interrupt.h	33;"	d
+IRQ_LPT1	.\include\interrupt.h	39;"	d
+IRQ_LPT2	.\include\interrupt.h	37;"	d
+IRQ_REAL_CLOCK	.\include\interrupt.h	40;"	d
+IS_BLK	.\include\ftype.h	19;"	d
+IS_CHR	.\include\ftype.h	18;"	d
+IS_DIR	.\include\ftype.h	20;"	d
+IS_NORMAL	.\include\ftype.h	21;"	d
+KB	.\include\memory.h	17;"	d
+KERNEL_CS	.\boot\oshead.asm	/^KERNEL_CS   equ kernel_code - sys_gdt$/;"	d
+KERNEL_CS	.\include\kernel.h	21;"	d
+KERNEL_DS	.\boot\oshead.asm	/^KERNEL_DS   equ kernel_data - sys_gdt$/;"	d
+KERNEL_DS	.\include\kernel.h	22;"	d
+KEYBOARD_BUFFER_SIZE	.\include\keyboard.h	16;"	d
+KEYBOARD_CTL	.\include\keyboard.h	128;"	d
+KEYBOARD_DATA	.\include\keyboard.h	129;"	d
+KEYMAP_COLS	.\include\keyboard.h	14;"	d
+KEYMASK_ALT_L	.\include\keyboard.h	29;"	d
+KEYMASK_ALT_R	.\include\keyboard.h	30;"	d
+KEYMASK_BREAK	.\include\keyboard.h	24;"	d
+KEYMASK_CAPS_LOCK	.\include\keyboard.h	38;"	d
+KEYMASK_CTRL_L	.\include\keyboard.h	27;"	d
+KEYMASK_CTRL_R	.\include\keyboard.h	28;"	d
+KEYMASK_EXT	.\include\keyboard.h	21;"	d
+KEYMASK_KEY	.\include\keyboard.h	23;"	d
+KEYMASK_MAKED	.\include\keyboard.h	37;"	d
+KEYMASK_NUMLOCK	.\include\keyboard.h	36;"	d
+KEYMASK_PAD	.\include\keyboard.h	32;"	d
+KEYMASK_PAUSEBREAK	.\include\keyboard.h	34;"	d
+KEYMASK_PRINTSCREEN	.\include\keyboard.h	35;"	d
+KEYMASK_PRINT_CHAR	.\include\keyboard.h	22;"	d
+KEYMASK_SCROLL_LOCK	.\include\keyboard.h	39;"	d
+KEYMASK_SHIFT_L	.\include\keyboard.h	25;"	d
+KEYMASK_SHIFT_R	.\include\keyboard.h	26;"	d
+KEY_EXT	.\include\keyboard.h	19;"	d
+LEFT	.\kernel\vsprintf.c	20;"	d	file:
+LEFTARROW	.\include\keyboard.h	89;"	d
+LOADSEG	.\boot\loader.asm	/^LOADSEG         equ     0x9000$/;"	d
+MAJOR	.\include\blk.h	41;"	d
+MAJOR_HD	.\include\blk.h	26;"	d
+MAJOR_LP	.\include\blk.h	29;"	d
+MAJOR_MEM	.\include\blk.h	24;"	d
+MAJOR_NULL	.\include\blk.h	23;"	d
+MAJOR_PIPE	.\include\blk.h	30;"	d
+MAJOR_TTY	.\include\blk.h	28;"	d
+MAJOR_TTYS	.\include\blk.h	27;"	d
+MAJOR_USB	.\include\blk.h	25;"	d
+MAX	.\include\oslib.h	14;"	d
+MAX_ERRORS	.\kernel\blk\hd.c	31;"	d	file:
+MB	.\include\memory.h	18;"	d
+MEM_BUFFER_SIZE	.\include\memory.h	14;"	d
+MIN	.\include\oslib.h	15;"	d
+MINOR	.\include\blk.h	42;"	d
+MINUTE	.\include\time.h	13;"	d
+MONO_ADDR_REG	.\include\const.h	16;"	d
+MONO_DATA_REG	.\include\const.h	17;"	d
+MONO_EGA_MEM_SIZE	.\include\const.h	14;"	d
+MONO_MDA_MEM_SIZE	.\include\const.h	15;"	d
+MONO_MEM_START	.\include\const.h	13;"	d
+MoveAfter	.\boot\loader.asm	/^MoveAfter:$/;"	l
+NAME_LEN	.\include\fs.h	34;"	d
+NR_BLK_DEVICE	.\include\blk.h	19;"	d
+NR_CONSOLE	.\include\console.h	12;"	d
+NR_FILE	.\include\fs.h	40;"	d
+NR_INODE	.\include\fs.h	38;"	d
+NR_INT_BOUNDS_CHECK	.\include\interrupt.h	18;"	d
+NR_INT_COPROCESSOR_ERROR	.\include\interrupt.h	28;"	d
+NR_INT_COPROCESSOR_NOT_AVL	.\include\interrupt.h	20;"	d
+NR_INT_COPROCESSOR_SEG_OVERRUN	.\include\interrupt.h	22;"	d
+NR_INT_DIVIDE_ERROR	.\include\interrupt.h	13;"	d
+NR_INT_DOUBLE_FAULT	.\include\interrupt.h	21;"	d
+NR_INT_GENERAL_PROTECTION	.\include\interrupt.h	26;"	d
+NR_INT_INT3	.\include\interrupt.h	16;"	d
+NR_INT_INVALID_OPCODE	.\include\interrupt.h	19;"	d
+NR_INT_INVALID_TSS	.\include\interrupt.h	23;"	d
+NR_INT_IRQ0	.\include\interrupt.h	31;"	d
+NR_INT_NMI	.\include\interrupt.h	15;"	d
+NR_INT_OVERFLOW	.\include\interrupt.h	17;"	d
+NR_INT_PAGE_FAULT	.\include\interrupt.h	27;"	d
+NR_INT_SEG_NOT_PRESENT	.\include\interrupt.h	24;"	d
+NR_INT_SINGLE_STEP	.\include\interrupt.h	14;"	d
+NR_INT_STACK_EXCEPTION	.\include\interrupt.h	25;"	d
+NR_INT_SYS_CALL	.\include\syscall.h	14;"	d
+NR_IRQS	.\kernel\i8259.c	11;"	d	file:
+NR_MAX_FILES	.\include\kernel.h	62;"	d
+NR_NUMPAD_KEY	.\include\keyboard.h	12;"	d
+NR_OPEN	.\include\fs.h	41;"	d
+NR_PAGES	.\mm\memory.c	18;"	d	file:
+NR_PROCESS	.\include\kernel.h	61;"	d
+NR_REQUEST	.\include\blk.h	20;"	d
+NR_SCAN_CODES	.\include\keyboard.h	11;"	d
+NR_SUPER	.\include\fs.h	39;"	d
+NR_SYS_CALLS	.\include\syscall.h	13;"	d
+NR_SYS_CALLS	.\kernel\syscall.asm	/^NR_SYS_CALLS    equ     0$/;"	d
+NR_TTY	.\include\tty.h	13;"	d
+NR_fork	.\include\stdcall.h	11;"	d
+NR_getpid	.\include\stdcall.h	15;"	d
+NR_pause	.\include\stdcall.h	12;"	d
+NR_read	.\include\stdcall.h	14;"	d
+NR_write	.\include\stdcall.h	13;"	d
+NULL	.\include\type.h	48;"	d
+NUMPAD_0	.\include\keyboard.h	104;"	d
+NUMPAD_1	.\include\keyboard.h	105;"	d
+NUMPAD_2	.\include\keyboard.h	106;"	d
+NUMPAD_3	.\include\keyboard.h	107;"	d
+NUMPAD_4	.\include\keyboard.h	108;"	d
+NUMPAD_5	.\include\keyboard.h	109;"	d
+NUMPAD_6	.\include\keyboard.h	110;"	d
+NUMPAD_7	.\include\keyboard.h	111;"	d
+NUMPAD_8	.\include\keyboard.h	112;"	d
+NUMPAD_9	.\include\keyboard.h	113;"	d
+NUMPAD_DEL	.\include\keyboard.h	125;"	d
+NUMPAD_DOT	.\include\keyboard.h	103;"	d
+NUMPAD_DOWN	.\include\keyboard.h	116;"	d
+NUMPAD_END	.\include\keyboard.h	120;"	d
+NUMPAD_ENTER	.\include\keyboard.h	102;"	d
+NUMPAD_HOME	.\include\keyboard.h	119;"	d
+NUMPAD_INS	.\include\keyboard.h	123;"	d
+NUMPAD_LEFT	.\include\keyboard.h	117;"	d
+NUMPAD_MID	.\include\keyboard.h	124;"	d
+NUMPAD_MINUS	.\include\keyboard.h	100;"	d
+NUMPAD_PAGEDOWN	.\include\keyboard.h	122;"	d
+NUMPAD_PAGEUP	.\include\keyboard.h	121;"	d
+NUMPAD_PLUS	.\include\keyboard.h	101;"	d
+NUMPAD_RIGHT	.\include\keyboard.h	118;"	d
+NUMPAD_SLASH	.\include\keyboard.h	98;"	d
+NUMPAD_STAR	.\include\keyboard.h	99;"	d
+NUMPAD_UP	.\include\keyboard.h	115;"	d
+NUM_LOCK	.\include\keyboard.h	61;"	d
+ORI_VIDEO_AX	.\kernel\chr\console.c	28;"	d	file:
+ORI_VIDEO_BX	.\kernel\chr\console.c	29;"	d	file:
+ORI_VIDEO_COLS	.\kernel\chr\console.c	24;"	d	file:
+ORI_VIDEO_CURSOR_X	.\kernel\chr\console.c	19;"	d	file:
+ORI_VIDEO_CURSOR_Y	.\kernel\chr\console.c	20;"	d	file:
+ORI_VIDEO_MODE	.\kernel\chr\console.c	22;"	d	file:
+ORI_VIDEO_ROWS	.\kernel\chr\console.c	26;"	d	file:
+OSLEN	.\boot\loader.asm	/^OSLEN           equ     1024$/;"	d
+OSSEG	.\boot\loader.asm	/^OSSEG           equ     0x1000$/;"	d
+OSSIZE	.\boot\loader.asm	/^OSSIZE          equ     512 * 1024$/;"	d
+PAGEDOWN	.\include\keyboard.h	86;"	d
+PAGEUP	.\include\keyboard.h	85;"	d
+PAGE_MEMORY	.\mm\memory.c	17;"	d	file:
+PAGE_NR	.\mm\memory.c	29;"	d	file:
+PAGE_SIZE	.\include\memory.h	13;"	d
+PAGE_UNUSED	.\mm\memory.c	26;"	d	file:
+PAGE_USED	.\mm\memory.c	25;"	d	file:
+PAUSEBREAK	.\include\keyboard.h	80;"	d
+PD_A	.\include\memory.h	27;"	d
+PD_G	.\include\memory.h	29;"	d
+PD_P	.\include\memory.h	22;"	d
+PD_PCD	.\include\memory.h	26;"	d
+PD_PS	.\include\memory.h	28;"	d
+PD_PWT	.\include\memory.h	25;"	d
+PD_RW	.\include\memory.h	23;"	d
+PD_US	.\include\memory.h	24;"	d
+PG_DIR	.\mm\memory.c	32;"	d	file:
+PG_TBL	.\mm\memory.c	33;"	d	file:
+PLUS	.\kernel\vsprintf.c	18;"	d	file:
+POWER	.\include\keyboard.h	93;"	d
+PRINTSCREEN	.\include\keyboard.h	79;"	d
+PRIVILEGE_KERNEL	.\include\kernel.h	40;"	d
+PRIVILEGE_USER	.\include\kernel.h	41;"	d
+PROCESS_MEM_SPACE	.\include\kernel.h	58;"	d
+PROCESS_RUNNING	.\include\process.h	17;"	d
+PROCESS_STOPPED	.\include\process.h	20;"	d
+PROCESS_WAIT_INTERRUPTIBLE	.\include\process.h	18;"	d
+PROCESS_WAIT_UNINTERRUPTIBLE	.\include\process.h	19;"	d
+PT_A	.\include\memory.h	35;"	d
+PT_D	.\include\memory.h	36;"	d
+PT_DAT	.\include\memory.h	37;"	d
+PT_G	.\include\memory.h	38;"	d
+PT_P	.\include\memory.h	30;"	d
+PT_PCD	.\include\memory.h	34;"	d
+PT_PWT	.\include\memory.h	33;"	d
+PT_RW	.\include\memory.h	31;"	d
+PT_US	.\include\memory.h	32;"	d
+READ	.\include\blk.h	15;"	d
+READ	.\include\fs.h	30;"	d
+RIGHTARROW	.\include\keyboard.h	90;"	d
+RMTOPMLEN	.\boot\loader.asm	/^RMTOPMLEN       equ     4$/;"	d
+RMTOPMSEG	.\boot\loader.asm	/^RMTOPMSEG       equ     0x9020$/;"	d
+ROOT_INODE	.\include\fs.h	35;"	d
+SCROLL_LOCK	.\include\keyboard.h	62;"	d
+SECOND	.\include\time.h	12;"	d
+SECTOR_SIZE	.\include\blk.h	39;"	d
+SHIFT_L	.\include\keyboard.h	52;"	d
+SHIFT_R	.\include\keyboard.h	53;"	d
+SIGN	.\kernel\vsprintf.c	17;"	d	file:
+SLEEP	.\include\keyboard.h	94;"	d
+SMALL	.\kernel\vsprintf.c	21;"	d	file:
+SPACE	.\kernel\vsprintf.c	19;"	d	file:
+STARTUP_ROOT_DEV	.\init\kmain.c	26;"	d	file:
+SUPER_MAGIC	.\include\fs.h	48;"	d
+TAB	.\include\keyboard.h	43;"	d
+TASK_CS	.\include\kernel.h	27;"	d
+TASK_DS	.\include\kernel.h	28;"	d
+TASK_LDT	.\include\kernel.h	23;"	d
+TASK_TSS	.\include\kernel.h	24;"	d
+TIMER_COUNTER0	.\include\time.h	28;"	d
+TIMER_COUNTER1	.\include\time.h	29;"	d
+TIMER_COUNTER2	.\include\time.h	30;"	d
+TIMER_CTL_REG	.\include\time.h	27;"	d
+TIMER_FREQUENCY	.\include\time.h	23;"	d
+TIMER_RATE_GENERATOR	.\include\time.h	33;"	d
+TRUE	.\include\type.h	51;"	d
+TTL_CTL_ECHO	.\include\tty.h	16;"	d
+TTY_BUFFER_SIZE	.\include\tty.h	12;"	d
+UPARROW	.\include\keyboard.h	87;"	d
+VIDEO_CGA	.\include\const.h	39;"	d
+VIDEO_CURSOR_H	.\include\const.h	33;"	d
+VIDEO_CURSOR_L	.\include\const.h	35;"	d
+VIDEO_EGAM	.\include\const.h	40;"	d
+VIDEO_MDA	.\include\const.h	38;"	d
+VIDEO_START_ADDR_H	.\include\const.h	29;"	d
+VIDEO_START_ADDR_L	.\include\const.h	31;"	d
+VIDEO_VGA	.\include\const.h	41;"	d
+WAKE	.\include\keyboard.h	95;"	d
+WRITE	.\include\blk.h	16;"	d
+WRITE	.\include\fs.h	31;"	d
+YEAR	.\include\time.h	16;"	d
+ZEROPAD	.\kernel\vsprintf.c	16;"	d	file:
+_AIFS_H	.\include\aifs.h	12;"	d
+_BLK_H	.\include\blk.h	8;"	d
+_BUFFER_H	.\include\buffer.h	8;"	d
+_CONSOLE_H	.\include\console.h	8;"	d
+_CONST_H	.\include\const.h	8;"	d
+_FCONST_H	.\include\fconst.h	8;"	d
+_FS_H	.\include\fs.h	8;"	d
+_FTYPE_H	.\include\ftype.h	8;"	d
+_HD_H	.\include\hd.h	8;"	d
+_INTERRUPT_H	.\include\interrupt.h	10;"	d
+_IO_H	.\include\io.h	8;"	d
+_KERNEL_H	.\include\kernel.h	12;"	d
+_KEYBOARD_H	.\include\keyboard.h	8;"	d
+_KEYMAP_H	.\include\keymap.h	8;"	d
+_MEMORY_H	.\include\memory.h	8;"	d
+_OSLIB_H	.\include\oslib.h	8;"	d
+_PROCESS_H	.\include\process.h	8;"	d
+_SCHED_H	.\include\sched.h	8;"	d
+_SIGNAL_H	.\include\signal.h	7;"	d
+_STDARG_H	.\include\stdarg.h	8;"	d
+_STDCALL_H	.\include\stdcall.h	8;"	d
+_STRING_H	.\include\string.h	8;"	d
+_SYSCALL_H	.\include\syscall.h	8;"	d
+_TIME_H	.\include\time.h	8;"	d
+_TTY_H	.\include\tty.h	10;"	d
+_TYPE_H	.\include\type.h	8;"	d
+_struct_blk_dev	.\include\blk.h	/^typedef struct _struct_blk_dev$/;"	s
+_struct_console	.\include\console.h	/^typedef struct _struct_console$/;"	s
+_struct_descriptor	.\include\kernel.h	/^typedef struct _struct_descriptor$/;"	s
+_struct_descriptor_detail	.\include\kernel.h	/^typedef struct _struct_descriptor_detail$/;"	s
+_struct_dir_entry	.\include\fs.h	/^typedef struct _struct_dir_entry$/;"	s
+_struct_file	.\include\fs.h	/^typedef struct _struct_file$/;"	s
+_struct_gate	.\include\kernel.h	/^typedef struct _struct_gate$/;"	s
+_struct_gate_detail	.\include\kernel.h	/^typedef struct _struct_gate_detail$/;"	s
+_struct_hd	.\include\hd.h	/^typedef struct _struct_hd$/;"	s
+_struct_hd_info	.\include\type.h	/^typedef struct _struct_hd_info$/;"	s
+_struct_hd_partition	.\include\hd.h	/^typedef struct _struct_hd_partition$/;"	s
+_struct_inode	.\include\fs.h	/^typedef struct _struct_inode$/;"	s
+_struct_keyboard	.\include\keyboard.h	/^typedef struct _struct_keyboard$/;"	s
+_struct_mem_buffer	.\include\buffer.h	/^struct _struct_mem_buffer$/;"	s
+_struct_mem_inode	.\include\fs.h	/^typedef struct _struct_mem_inode$/;"	s
+_struct_mem_super_block	.\include\fs.h	/^typedef struct _struct_mem_super_block$/;"	s
+_struct_partition	.\include\hd.h	/^typedef struct _struct_partition$/;"	s
+_struct_process	.\include\process.h	/^struct _struct_process$/;"	s
+_struct_request	.\include\blk.h	/^typedef struct _struct_request$/;"	s
+_struct_super_block	.\include\fs.h	/^typedef struct _struct_super_block$/;"	s
+_struct_time	.\include\time.h	/^typedef struct _struct_time$/;"	s
+_struct_tss	.\include\process.h	/^struct _struct_tss$/;"	s
+_struct_tty	.\include\tty.h	/^typedef struct _struct_tty$/;"	s
+_struct_tty_buffer	.\include\tty.h	/^typedef struct _struct_tty_buffer$/;"	s
+_struct_u128	.\include\type.h	/^typedef struct _struct_u128$/;"	s
+_struct_u64	.\include\type.h	/^typedef struct _struct_u64$/;"	s
+_va_rounded_size	.\include\stdarg.h	18;"	d
+a	.\include\type.h	/^    unsigned int a;$/;"	m	struct:_struct_u128
+a	.\include\type.h	/^    unsigned int a;$/;"	m	struct:_struct_u64
+add_entry	.\fs\namei.c	/^private struct_dir_entry *add_entry(struct_mem_inode *dir,char *filename,struct_mem_buffer **ppmbuffer)$/;"	f
+add_request	.\kernel\blk\rw_blk.c	/^private void add_request(struct_blk_dev *bdev,struct_request *request)$/;"	f
+atoi	.\kernel\vsprintf.c	/^private int atoi(const char **s)$/;"	f
+attribute	.\include\kernel.h	/^    u8 attribute;$/;"	m	struct:_struct_descriptor
+attribute	.\include\kernel.h	/^    u8 attribute;$/;"	m	struct:_struct_gate
+avl	.\include\kernel.h	/^    unsigned int avl:1;             \/*avaiable，供系统软件使用*\/$/;"	m	struct:_struct_descriptor_detail
+b	.\include\type.h	/^    unsigned int b;$/;"	m	struct:_struct_u128
+b	.\include\type.h	/^    unsigned int b;$/;"	m	struct:_struct_u64
+base0_15	.\include\kernel.h	/^    u16 base0_15;$/;"	m	struct:_struct_descriptor
+base0_23	.\include\kernel.h	/^    unsigned int base0_23:24;       \/*段基址的低24位*\/$/;"	m	struct:_struct_descriptor_detail
+base16_23	.\include\kernel.h	/^    u8 base16_23;$/;"	m	struct:_struct_descriptor
+base24_31	.\include\kernel.h	/^    u8 base24_31;$/;"	m	struct:_struct_descriptor
+base24_31	.\include\kernel.h	/^    unsigned int base24_31:8;       \/*基地址高8位*\/$/;"	m	struct:_struct_descriptor_detail
+blk_dev	.\kernel\blk\blk.c	/^public struct_blk_dev blk_dev[NR_BLK_DEVICE];$/;"	v
+blk_dev_init	.\kernel\blk\rw_blk.c	/^public void blk_dev_init()$/;"	f
+blk_request	.\kernel\blk\blk.c	/^public struct_request blk_request[NR_REQUEST]; $/;"	v
+block	.\include\buffer.h	/^    unsigned int block;         \/*块号，从0开始*\/$/;"	m	struct:_struct_mem_buffer
+block_read	.\fs\block_dev.c	/^public int block_read(int dev,int *pos,char *buffer,int count)$/;"	f
+block_write	.\fs\block_dev.c	/^public int block_write(int dev,int *pos,char *buffer,int count)$/;"	f
+boolean	.\include\type.h	/^typedef int boolean;$/;"	t
+bootable	.\include\hd.h	/^    unsigned char bootable;         \/*80h=可引导，00h=不可引导，其它*\/$/;"	m	struct:_struct_partition
+bounds_check	.\kernel\interrupt.asm	/^bounds_check:$/;"	l
+bread	.\kernel\buffer.c	/^public struct_mem_buffer *bread(int dev,int block)$/;"	f
+brelease	.\kernel\buffer.c	/^public void brelease(struct_mem_buffer *mbuffer)$/;"	f
+buffer	.\include\blk.h	/^    char *buffer;                   \/*指向mbuffer->data*\/$/;"	m	struct:_struct_request
+buffer	.\include\keyboard.h	/^    char buffer[KEYBOARD_BUFFER_SIZE];$/;"	m	struct:_struct_keyboard
+buffer	.\include\tty.h	/^    unsigned int buffer[TTY_BUFFER_SIZE];$/;"	m	struct:_struct_tty_buffer
+buffer	.\kernel\printfs.c	/^char buffer[TTY_BUFFER_SIZE];       \/*1024bytes*\/$/;"	v
+buffer_memory_end	.\kernel\kernel.c	/^public unsigned int buffer_memory_end;$/;"	v
+buffer_memory_start	.\kernel\kernel.c	/^public unsigned int buffer_memory_start;$/;"	v
+c	.\include\type.h	/^    unsigned int c;$/;"	m	struct:_struct_u128
+caps_lock	.\kernel\chr\keyboard.c	/^private u8 caps_lock;$/;"	v
+chr_read	.\fs\chr_dev.c	/^public int chr_read(int dev,char *buffer,int count)$/;"	f
+chr_write	.\fs\chr_dev.c	/^public int chr_write(int dev,char *buffer,int count)$/;"	f
+clear_bit	.\oslib\string.asm	/^clear_bit:$/;"	l
+clear_block	.\include\string.h	22;"	d
+cmd	.\include\blk.h	/^    int cmd;                        \/*读或写*\/$/;"	m	struct:_struct_request
+code_begin	.\boot\rmtopm.asm	/^code_begin:$/;"	l
+console	.\include\tty.h	/^    struct_console *console;$/;"	m	struct:_struct_tty
+console_init	.\kernel\chr\console.c	/^public void console_init()$/;"	f
+console_table	.\include\console.h	/^public struct_console console_table[NR_CONSOLE];$/;"	v
+console_write	.\kernel\chr\console.c	/^public void console_write(struct_tty *tty)$/;"	f
+coprocessor_error	.\kernel\interrupt.asm	/^coprocessor_error:$/;"	l
+coprocessor_not_avl	.\kernel\interrupt.asm	/^coprocessor_not_avl:$/;"	l
+coprocessor_seg_overrun	.\kernel\interrupt.asm	/^coprocessor_seg_overrun:$/;"	l
+copy_memory	.\kernel\fork.c	/^public boolean copy_memory(int proc_nr,struct_process *proc)$/;"	f
+copy_page_tables	.\mm\memory.c	/^public boolean copy_page_tables(u32 from,u32 to,int size)$/;"	f
+copy_process	.\kernel\fork.c	/^public int copy_process(int bad_eip,int proc_nr,int ebx,int ecx,int edx,int gs,$/;"	f
+count	.\include\buffer.h	/^    unsigned char count;        \/*使用此缓冲块的进程数*\/ $/;"	m	struct:_struct_mem_buffer
+count	.\include\fs.h	/^    unsigned short count;       \/*i节点被引用的次数，0表示空闲*\/$/;"	m	struct:_struct_mem_inode
+count	.\include\fs.h	/^    unsigned short count;       \/*此文件被引用的次数*\/$/;"	m	struct:_struct_file
+count	.\include\keyboard.h	/^    unsigned int count;$/;"	m	struct:_struct_keyboard
+count	.\include\tty.h	/^    unsigned int count;$/;"	m	struct:_struct_tty_buffer
+cr	.\kernel\chr\console.c	/^private void cr(struct_console *console)$/;"	f
+cr3	.\include\process.h	/^    unsigned int cr3;$/;"	m	struct:_struct_tss
+create_time	.\include\fs.h	/^    unsigned int create_time;   \/*创建时间*\/$/;"	m	struct:_struct_inode
+create_time	.\include\fs.h	/^    unsigned int create_time;   \/*创建时间*\/$/;"	m	struct:_struct_mem_inode
+create_time	.\include\process.h	/^    unsigned int create_time;   \/*进程开始运行的时间*\/$/;"	m	struct:_struct_process
+cs	.\include\process.h	/^    unsigned int cs;$/;"	m	struct:_struct_tss
+cstr	.\include\type.h	/^typedef char *cstr;$/;"	t
+ctl	.\include\hd.h	/^    u8 ctl;                \/*控制字节*\/$/;"	m	struct:_struct_hd
+ctl_flags	.\include\tty.h	/^    unsigned int ctl_flags;$/;"	m	struct:_struct_tty
+current	.\kernel\kernel.c	/^public struct_process *current;$/;"	v
+current	.\kernel\sched.c	/^struct_process *current;    \/*当前任务指针*\/$/;"	v
+current_mem_addr	.\include\console.h	/^    unsigned int current_mem_addr;  \/*物理位置*\/$/;"	m	struct:_struct_console
+current_request	.\include\blk.h	/^    struct_request *current_request;\/*当前处理请求项*\/$/;"	m	struct:_struct_blk_dev
+cursor_pos	.\include\console.h	/^    unsigned int cursor_pos;        \/*光标位置，物理*\/$/;"	m	struct:_struct_console
+cylinder	.\include\hd.h	/^    u16 cylinder;          \/*柱面数*\/$/;"	m	struct:_struct_hd
+d	.\include\type.h	/^    unsigned int d;$/;"	m	struct:_struct_u128
+d_b	.\include\kernel.h	/^    unsigned int d_b:1;             \/*default operation size,0-16,1-32*\/$/;"	m	struct:_struct_descriptor_detail
+data	.\include\buffer.h	/^    char *data;                 \/*指向数据块（1024B）的指针*\/$/;"	m	struct:_struct_mem_buffer
+data	.\include\fs.h	/^    unsigned short data[9];     \/*盘块号数组，0-6直接，7一级，8二级*\/$/;"	m	struct:_struct_inode
+data	.\include\fs.h	/^    unsigned short data[9];     \/*盘块号数组，0-6直接，7一级，8二级*\/$/;"	m	struct:_struct_mem_inode
+data	.\include\type.h	/^    char data[32];$/;"	m	struct:_struct_hd_info
+day	.\include\time.h	/^    unsigned int day;$/;"	m	struct:_struct_time
+day_of_week	.\include\time.h	/^    unsigned int day_of_week;   \/*一星期的某天，[0-6]对应星期天－星期一*\/$/;"	m	struct:_struct_time
+day_of_year	.\include\time.h	/^    unsigned int day_of_year;   \/*一年中的某天，[0-365]*\/$/;"	m	struct:_struct_time
+days_of_month	.\kernel\ktime.c	/^public unsigned int days_of_month[12] = {$/;"	v
+del	.\kernel\chr\console.c	/^private void del(struct_console *console)$/;"	f
+del_lf	.\kernel\chr\console.c	/^private void del_lf(struct_console *console)$/;"	f
+delay_in_byte	.\include\io.h	27;"	d
+delay_out_byte	.\include\io.h	22;"	d
+delete_char	.\kernel\chr\console.c	/^private void delete_char(struct_console *console)$/;"	f
+delete_line	.\kernel\chr\console.c	/^private void delete_line(struct_console *console)$/;"	f
+dev	.\include\blk.h	/^    int dev;                        \/*-1 if no request*\/$/;"	m	struct:_struct_request
+dev	.\include\buffer.h	/^    unsigned int dev;           \/*设备编号，加上块号就可寻址了*\/$/;"	m	struct:_struct_mem_buffer
+dev	.\include\fs.h	/^    unsigned int dev;                    \/*超级块所在的设备号*\/$/;"	m	struct:_struct_mem_super_block
+dev	.\include\fs.h	/^    unsigned int dev;           \/*i节点所在的设备号*\/$/;"	m	struct:_struct_mem_inode
+dir_namei	.\fs\namei.c	/^private struct_mem_inode *dir_namei(char *path,$/;"	f
+dirty	.\include\buffer.h	/^    unsigned char dirty;        \/*缓冲块中的数据与设备中的数据不一致*\/$/;"	m	struct:_struct_mem_buffer
+dirty	.\include\fs.h	/^    unsigned char dirty;                 \/*已被修改标志*\/$/;"	m	struct:_struct_mem_super_block
+dirty	.\include\fs.h	/^    unsigned char dirty;        \/*i节点被修改标志*\/$/;"	m	struct:_struct_mem_inode
+disable_int	.\oslib\oslib.asm	/^disable_int:$/;"	l
+disable_irq	.\kernel\i8259.c	/^public void disable_irq(int irq)$/;"	f
+divide_error	.\kernel\interrupt.asm	/^divide_error:$/;"	l
+dmap	.\include\fs.h	/^    struct_mem_buffer *dmap[8];  \/*数据块位图在高速缓冲块中的指针*\/$/;"	m	struct:_struct_mem_super_block
+dmap_blocks	.\include\fs.h	/^    u16 dmap_blocks;       \/*数据块位图所占块数*\/$/;"	m	struct:_struct_mem_super_block
+dmap_blocks	.\include\fs.h	/^    u16 dmap_blocks;       \/*数据块位图所占块数*\/$/;"	m	struct:_struct_super_block
+do_bounds_check	.\kernel\interrupt.c	/^public void do_bounds_check(u32 esp,u32 err_code)$/;"	f
+do_coprocessor_error	.\kernel\interrupt.c	/^public void do_coprocessor_error(u32 esp,u32 err_code)$/;"	f
+do_coprocessor_not_avl	.\kernel\interrupt.c	/^public void do_coprocessor_not_avl(u32 esp,u32 err_code)$/;"	f
+do_coprocessor_seg_overrun	.\kernel\interrupt.c	/^public void do_coprocessor_seg_overrun(u32 esp,u32 err_code)$/;"	f
+do_div	.\kernel\vsprintf.c	/^private int do_div(int *n,int base)$/;"	f
+do_divide_error	.\kernel\interrupt.c	/^public void do_divide_error(u32 esp,u32 err_code)$/;"	f
+do_double_fault	.\kernel\interrupt.c	/^public void do_double_fault(u32 esp,u32 err_code)$/;"	f
+do_general_protection	.\kernel\interrupt.c	/^public void do_general_protection(u32 esp,u32 err_code)$/;"	f
+do_hd	.\kernel\blk\hd.c	/^private int_handler do_hd;$/;"	v
+do_hd_request	.\kernel\blk\hd.c	/^void do_hd_request()$/;"	f
+do_int	.\kernel\interrupt.c	/^private void do_int(int vector,u32 esp,u32 err_code)$/;"	f
+do_int3	.\kernel\interrupt.c	/^public void do_int3(u32 esp,u32 err_code)$/;"	f
+do_invalid_opcode	.\kernel\interrupt.c	/^public void do_invalid_opcode(u32 esp,u32 err_code)$/;"	f
+do_invalid_tss	.\kernel\interrupt.c	/^public void do_invalid_tss(u32 esp,u32 err_code)$/;"	f
+do_nmi	.\kernel\interrupt.c	/^public void do_nmi(u32 esp,u32 err_code)$/;"	f
+do_no_page	.\mm\memory.c	/^public void do_no_page(u32 err_code,u32 address)$/;"	f
+do_overflow	.\kernel\interrupt.c	/^public void do_overflow(u32 esp,u32 err_code)$/;"	f
+do_request_fn	.\include\blk.h	/^    void (*do_request_fn)(void);    \/*处理请求项的函数*\/$/;"	m	struct:_struct_blk_dev
+do_reserved	.\kernel\interrupt.c	/^public void do_reserved(u32 esp,u32 err_code)$/;"	f
+do_seg_not_present	.\kernel\interrupt.c	/^public void do_seg_not_present(u32 esp,u32 err_code)$/;"	f
+do_single_step	.\kernel\interrupt.c	/^public void do_single_step(u32 esp,u32 err_code)$/;"	f
+do_stack_exception	.\kernel\interrupt.c	/^public void do_stack_exception(u32 esp,u32 err_code)$/;"	f
+do_wp_page	.\mm\memory.c	/^public void do_wp_page(u32 err_code,u32 address)$/;"	f
+double_fault	.\kernel\interrupt.asm	/^double_fault:$/;"	l
+dpl	.\include\kernel.h	/^    unsigned int dpl:2;             \/*段的特权级*\/$/;"	m	struct:_struct_descriptor_detail
+dpl	.\include\kernel.h	/^    unsigned int dpl:2;             \/*段的特权级*\/$/;"	m	struct:_struct_gate_detail
+ds	.\include\process.h	/^    unsigned int ds;$/;"	m	struct:_struct_tss
+eax	.\include\process.h	/^    unsigned int eax;$/;"	m	struct:_struct_tss
+ebp	.\include\process.h	/^    unsigned int ebp;$/;"	m	struct:_struct_tss
+ebx	.\include\process.h	/^    unsigned int ebx;$/;"	m	struct:_struct_tss
+ecx	.\include\process.h	/^    unsigned int ecx;$/;"	m	struct:_struct_tss
+edi	.\include\process.h	/^    unsigned int edi;$/;"	m	struct:_struct_tss
+edx	.\include\process.h	/^    unsigned int edx;$/;"	m	struct:_struct_tss
+eflags	.\include\process.h	/^    unsigned int eflags;$/;"	m	struct:_struct_tss
+eip	.\include\process.h	/^    unsigned int eip;$/;"	m	struct:_struct_tss
+enable_int	.\oslib\oslib.asm	/^enable_int:$/;"	l
+enable_irq	.\kernel\i8259.c	/^public void enable_irq(int irq)$/;"	f
+end_bss	.\include\process.h	/^    int start_code,end_code,end_data,end_bss,start_stack;$/;"	m	struct:_struct_process
+end_code	.\include\process.h	/^    int start_code,end_code,end_data,end_bss,start_stack;$/;"	m	struct:_struct_process
+end_cyl	.\include\hd.h	/^    unsigned char end_cyl;          \/*结束柱面号的低8位*\/$/;"	m	struct:_struct_partition
+end_data	.\include\process.h	/^    int start_code,end_code,end_data,end_bss,start_stack;$/;"	m	struct:_struct_process
+end_head	.\include\hd.h	/^    unsigned char end_head;         \/*结束磁头号*\/$/;"	m	struct:_struct_partition
+end_request	.\kernel\blk\blk.c	/^public void end_request(int dev,int uptodate)$/;"	f
+end_sector	.\include\hd.h	/^    unsigned char end_sector;       \/*结束扇区号（0-5位），高两位为结束柱面号的8-9位*\/$/;"	m	struct:_struct_partition
+err_msg	.\kernel\interrupt.c	/^private char *err_msg[] = {"#DE-divide error",$/;"	v
+error_code	.\kernel\interrupt.asm	/^error_code:$/;"	l
+es	.\include\process.h	/^    unsigned int es;$/;"	m	struct:_struct_tss
+esi	.\include\process.h	/^    unsigned int esi;$/;"	m	struct:_struct_tss
+esp	.\include\process.h	/^    unsigned int esp;$/;"	m	struct:_struct_tss
+esp0	.\include\process.h	/^    unsigned int esp0;$/;"	m	struct:_struct_tss
+esp1	.\include\process.h	/^    unsigned int esp1;$/;"	m	struct:_struct_tss
+esp2	.\include\process.h	/^    unsigned int esp2;$/;"	m	struct:_struct_tss
+exit_code	.\include\process.h	/^    int exit_code;$/;"	m	struct:_struct_process
+exit_time	.\include\process.h	/^    unsigned int exit_time;     \/*进程退出时间*\/$/;"	m	struct:_struct_process
+extern	.\boot\oshead.asm	/^extern kmain$/;"	l
+extern	.\boot\oshead.asm	/^extern sys_stack$/;"	l
+extern	.\kernel\i8259.asm	/^extern irq_handler_table$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_bounds_check                  ;5      越界                     fault       无$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_coprocessor_error             ;16     x87FPU错          fault       无$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_coprocessor_not_avl           ;7      无数学协处理器fault       无$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_coprocessor_seg_overrun       ;9      协处理器段越界fault       无$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_divide_error                  ;0      除法错                 fault       无$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_double_fault                  ;8      双重错误             abort      有(0)$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_general_protection            ;13     常规保护错误     fault       有$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_int3                          ;3      int3       trap        无$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_invalid_opcode                ;6      无效操作码        fault       无$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_invalid_tss                   ;10     无效的TSS   fault       有$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_nmi                           ;2      非屏蔽中断        interrupt   无$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_overflow                      ;4      溢出                     trap        无$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_page_fault                    ;14     页错误                  fault       有$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_reserved                      ;暂时没有中断处理程序的函数执行此函数$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_seg_not_present               ;11     段不存在             fault       有$/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_single_step                   ;1      调试异常            falut\\trap  无 $/;"	l
+extern	.\kernel\interrupt.asm	/^extern do_stack_exception               ;12     堆栈错误             fault       有$/;"	l
+extern	.\kernel\kernel.asm	/^extern sys_pgdir$/;"	l
+extern	.\kernel\syscall.asm	/^extern copy_process$/;"	l
+extern	.\kernel\syscall.asm	/^extern get_free_process$/;"	l
+extern	.\kernel\syscall.asm	/^extern sys_call_table$/;"	l
+extern	.\mm\pf.asm	/^extern do_no_page$/;"	l
+extern	.\mm\pf.asm	/^extern do_wp_page$/;"	l
+failed_rw	.\kernel\blk\hd.c	/^private void failed_rw()$/;"	f
+false	.\include\type.h	54;"	d
+file_read	.\fs\file_dev.c	/^public int file_read(struct_mem_inode *inode,struct_file *file,char *buffer,int count)$/;"	f
+file_table	.\fs\file.c	/^struct_file file_table[NR_FILE];$/;"	v
+file_write	.\fs\file_dev.c	/^public int file_write(struct_mem_inode *inode,struct_file *file,char *buffer,int count)$/;"	f
+files	.\include\process.h	/^    struct_file *files[NR_OPEN]; \/*打开的文件数组*\/$/;"	m	struct:_struct_process
+find_buffer	.\kernel\buffer.c	/^public struct_mem_buffer *find_buffer(int dev,int block)$/;"	f
+find_entry	.\fs\namei.c	/^private struct_dir_entry *find_entry(struct_mem_inode *dir,char *filename,struct_mem_buffer **ppmbuffer)$/;"	f
+find_first_zero	.\oslib\string.asm	/^find_first_zero:$/;"	l
+first_data_block	.\include\fs.h	/^    u16 first_data_block;  \/*第一个数据块的块号，在整个磁盘内从0开始*\/$/;"	m	struct:_struct_mem_super_block
+first_data_block	.\include\fs.h	/^    u16 first_data_block;  \/*第一个数据块的块号，在整个磁盘内从0开始*\/$/;"	m	struct:_struct_super_block
+flag_alt_l	.\kernel\chr\keyboard.c	/^private u8 flag_alt_l,flag_alt_r;$/;"	v
+flag_alt_r	.\kernel\chr\keyboard.c	/^private u8 flag_alt_l,flag_alt_r;$/;"	v
+flag_ctrl_l	.\kernel\chr\keyboard.c	/^private u8 flag_ctrl_l,flag_ctrl_r;$/;"	v
+flag_ctrl_r	.\kernel\chr\keyboard.c	/^private u8 flag_ctrl_l,flag_ctrl_r;$/;"	v
+flag_shift_l	.\kernel\chr\keyboard.c	/^private u8 flag_shift_l,flag_shift_r;$/;"	v
+flag_shift_r	.\kernel\chr\keyboard.c	/^private u8 flag_shift_l,flag_shift_r;$/;"	v
+flags	.\include\fs.h	/^    unsigned short flags;       \/*文件打开和控制标志，打开时设置*\/$/;"	m	struct:_struct_file
+fn_sys_call	.\include\syscall.h	/^typedef void* fn_sys_call;$/;"	t
+free_block	.\fs\bitmap.c	/^public void free_block(int dev,int block)$/;"	f
+free_inode	.\fs\bitmap.c	/^public void free_inode(struct_mem_inode *inode)$/;"	f
+free_level1	.\fs\truncate.c	/^private void free_level1(int dev,int block)$/;"	f
+free_level2	.\fs\truncate.c	/^private void free_level2(int dev,int block)$/;"	f
+free_page_tables	.\mm\memory.c	/^public void free_page_tables(u32 addr,u32 size)$/;"	f
+free_phy_page	.\mm\memory.c	/^public void free_phy_page(unsigned int addr)$/;"	f
+fs	.\include\process.h	/^    unsigned int fs;$/;"	m	struct:_struct_tss
+g	.\include\kernel.h	/^    unsigned int g:1;               \/*分配粒度，0-byte，1-4KB*\/$/;"	m	struct:_struct_descriptor_detail
+general_protection	.\kernel\interrupt.asm	/^general_protection:$/;"	l
+get_buffer	.\kernel\buffer.c	/^public struct_mem_buffer *get_buffer(int dev,int block)$/;"	f
+get_char_from_write	.\kernel\chr\tty.c	/^public unsigned char get_char_from_write(struct_tty *tty)$/;"	f
+get_dir	.\fs\namei.c	/^private struct_mem_inode *get_dir(char *path,cstr filename,u8 *isfile)$/;"	f
+get_empty_inode	.\fs\inode.c	/^public struct_mem_inode *get_empty_inode(void)$/;"	f
+get_empty_page	.\mm\memory.c	/^public u32 get_empty_page(u32 address)$/;"	f
+get_empty_tty	.\kernel\chr\tty.c	/^public struct_tty *get_empty_tty(unsigned int pid)$/;"	f
+get_free_process	.\kernel\fork.c	/^public int get_free_process()$/;"	f
+get_inode	.\fs\inode.c	/^public struct_mem_inode *get_inode(int dev,int nr)$/;"	f
+get_key_from_tty_read	.\kernel\chr\tty.c	/^public u32 get_key_from_tty_read(struct_tty *tty)$/;"	f
+get_last_pid	.\kernel\fork.c	/^public int get_last_pid()$/;"	f
+get_phy_page	.\mm\memory.c	/^public int get_phy_page(void)$/;"	f
+get_seg_base	.\kernel\kernel.c	/^public inline int get_seg_base(struct_descriptor *sd)$/;"	f
+get_seg_limit	.\kernel\kernel.c	/^public inline u32 get_seg_limit(struct_descriptor *sd)$/;"	f
+get_startup_time	.\kernel\ktime.c	/^public unsigned int get_startup_time(struct_time *tm)$/;"	f
+get_super	.\fs\super.c	/^public struct_mem_super_block *get_super(int dev)$/;"	f
+getx	.\kernel\chr\console.c	/^private inline unsigned int getx(unsigned int base,unsigned int cursor_pos)$/;"	f
+gety	.\kernel\chr\console.c	/^private inline unsigned int gety(unsigned int base,unsigned int cursor_pos)$/;"	f
+global	.\boot\oshead.asm	/^global sys_gdt,sys_gdt_48$/;"	l
+global	.\boot\oshead.asm	/^global sys_idt,sys_idt_48$/;"	l
+global	.\boot\oshead.asm	/^global sys_pgdir$/;"	l
+global	.\boot\oshead.asm	/^global sys_pgtbl$/;"	l
+global	.\kernel\i8259.asm	/^global irq_0,irq_1,irq_2,irq_3,irq_4,irq_5,irq_6,irq_7$/;"	l
+global	.\kernel\i8259.asm	/^global irq_8,irq_9,irq_10,irq_11,irq_12,irq_13,irq_14,irq_15$/;"	l
+global	.\kernel\interrupt.asm	/^global bounds_check,invalid_opcode,coprocessor_not_avl$/;"	l
+global	.\kernel\interrupt.asm	/^global divide_error,single_step,nmi,int3,overflow$/;"	l
+global	.\kernel\interrupt.asm	/^global double_fault,coprocessor_seg_overrun,invalid_tss,seg_not_present$/;"	l
+global	.\kernel\interrupt.asm	/^global reserved$/;"	l
+global	.\kernel\interrupt.asm	/^global stack_exception,general_protection,coprocessor_error$/;"	l
+global	.\kernel\kernel.asm	/^global load_seg$/;"	l
+global	.\kernel\kernel.asm	/^global move_to_user$/;"	l
+global	.\kernel\kernel.asm	/^global reload_cr3$/;"	l
+global	.\kernel\syscall.asm	/^global sys_call$/;"	l
+global	.\kernel\syscall.asm	/^global sys_fork$/;"	l
+global	.\mm\pf.asm	/^global page_fault$/;"	l
+global	.\oslib\oslib.asm	/^global disable_int$/;"	l
+global	.\oslib\oslib.asm	/^global enable_int$/;"	l
+global	.\oslib\oslib.asm	/^global nop$/;"	l
+global	.\oslib\string.asm	/^global memcpy,memset,strlen,strchr$/;"	l
+global	.\oslib\string.asm	/^global set_bit,clear_bit,find_first_zero$/;"	l
+gotoxy	.\kernel\chr\console.c	/^private void gotoxy(struct_console *console,unsigned int x,unsigned int y)$/;"	f
+gs	.\include\process.h	/^    unsigned int gs;$/;"	m	struct:_struct_tss
+halt	.\kernel\kernel.c	/^public void halt(void)$/;"	f
+halts	.\kernel\kernel.c	/^public inline void halts(char *str)$/;"	f
+handle_irq	.\kernel\i8259.asm	/^handle_irq:$/;"	l
+hd	.\kernel\blk\hd.c	/^public struct_hd hd[2] = {{0,0,0,0,0,0},{0,0,0,0,0,0}};$/;"	v
+hd_cmd_out	.\kernel\blk\hd.c	/^private void hd_cmd_out(unsigned int driver,unsigned nsectors,$/;"	f
+hd_init	.\kernel\blk\hd.c	/^void hd_init(void *bios_hd_data)$/;"	f
+hd_partition	.\kernel\blk\hd.c	/^public struct_hd_partition hd_partition[10];$/;"	v
+head	.\include\hd.h	/^    u16 head;              \/*磁头数*\/$/;"	m	struct:_struct_hd
+heads	.\boot\loader.asm	/^heads:$/;"	l
+hour	.\include\time.h	/^    unsigned int hour;$/;"	m	struct:_struct_time
+ib_map	.\fs\inode.c	/^public int ib_map(struct_mem_inode *inode,int block)$/;"	f
+ib_map_helper	.\fs\inode.c	/^private int ib_map_helper(struct_mem_inode *inode,int block,int new)$/;"	f
+ib_map_new	.\fs\inode.c	/^public int ib_map_new(struct_mem_inode *inode,int block)$/;"	f
+image	.\include\process.h	/^    struct_mem_inode *image;    \/*可执行文件i节点*\/$/;"	m	struct:_struct_process
+imap	.\include\fs.h	/^    struct_mem_buffer *imap[8];  \/*i节点位图在高速缓冲块中的指针*\/$/;"	m	struct:_struct_mem_super_block
+imap_blocks	.\include\fs.h	/^    u16 imap_blocks;       \/*i节点位图所占块数*\/$/;"	m	struct:_struct_mem_super_block
+imap_blocks	.\include\fs.h	/^    u16 imap_blocks;       \/*i节点位图所占块数*\/$/;"	m	struct:_struct_super_block
+imount	.\include\fs.h	/^    struct_mem_inode *imount;            \/*该文件系统被安装到的i节点*\/$/;"	m	struct:_struct_mem_super_block
+in	.\include\type.h	15;"	d
+in_byte	.\include\io.h	15;"	d
+in_order	.\kernel\blk\rw_blk.c	/^private int in_order(struct_request *sr1,struct_request *sr2)$/;"	f
+inc	.\boot\loader.asm	/^            inc     dx$/;"	d
+init_8259A	.\kernel\i8259.c	/^public void init_8259A()$/;"	f
+init_keyboard	.\kernel\chr\keyboard.c	/^public void init_keyboard()$/;"	f
+init_tty	.\kernel\chr\tty.c	/^public void init_tty()$/;"	f
+inode	.\include\fs.h	/^    struct_mem_inode *inode;    \/*对应内存i节点*\/$/;"	m	struct:_struct_file
+inode	.\include\fs.h	/^    unsigned short inode;$/;"	m	struct:_struct_dir_entry
+inode_num	.\include\fs.h	/^    unsigned short inode_num;    \/*i节点号*\/$/;"	m	struct:_struct_mem_inode
+inode_table	.\fs\inode.c	/^public struct_mem_inode inode_table[NR_INODE];$/;"	v
+input_flags	.\include\tty.h	/^    unsigned int input_flags;$/;"	m	struct:_struct_tty
+insert_char	.\kernel\chr\console.c	/^private void insert_char(struct_console *console,unsigned char c)$/;"	f
+insert_line	.\kernel\chr\console.c	/^private void insert_line(struct_console *console)$/;"	f
+int3	.\kernel\interrupt.asm	/^int3:$/;"	l
+int_handler	.\include\type.h	/^typedef void (*int_handler)();$/;"	t
+int_hd_read	.\kernel\blk\hd.c	/^private void int_hd_read()$/;"	f
+int_hd_write	.\kernel\blk\hd.c	/^private void int_hd_write()$/;"	f
+int_init	.\kernel\interrupt.c	/^public void int_init()$/;"	f
+int_reset	.\kernel\blk\hd.c	/^private void int_reset()$/;"	f
+int_unexpected_hd	.\kernel\blk\hd.c	/^void int_unexpected_hd()$/;"	f
+interruptible_sleep_on	.\kernel\sched.c	/^public void interruptible_sleep_on(struct_process **proc_wait_head)$/;"	f
+invalid_dev_buffers	.\kernel\buffer.c	/^public void invalid_dev_buffers(int dev)$/;"	f
+invalid_inodes	.\fs\inode.c	/^public void invalid_inodes(int dev)$/;"	f
+invalid_opcode	.\kernel\interrupt.asm	/^invalid_opcode:$/;"	l
+invalid_tss	.\kernel\interrupt.asm	/^invalid_tss:$/;"	l
+io_base	.\include\process.h	/^    u16 io_base;$/;"	m	struct:_struct_tss
+irq_0	.\kernel\i8259.asm	/^irq_0:$/;"	l
+irq_1	.\kernel\i8259.asm	/^irq_1:$/;"	l
+irq_10	.\kernel\i8259.asm	/^irq_10:$/;"	l
+irq_11	.\kernel\i8259.asm	/^irq_11:$/;"	l
+irq_12	.\kernel\i8259.asm	/^irq_12:$/;"	l
+irq_13	.\kernel\i8259.asm	/^irq_13:$/;"	l
+irq_14	.\kernel\i8259.asm	/^irq_14:$/;"	l
+irq_15	.\kernel\i8259.asm	/^irq_15:$/;"	l
+irq_2	.\kernel\i8259.asm	/^irq_2:$/;"	l
+irq_3	.\kernel\i8259.asm	/^irq_3:$/;"	l
+irq_4	.\kernel\i8259.asm	/^irq_4:$/;"	l
+irq_5	.\kernel\i8259.asm	/^irq_5:$/;"	l
+irq_6	.\kernel\i8259.asm	/^irq_6:$/;"	l
+irq_7	.\kernel\i8259.asm	/^irq_7:$/;"	l
+irq_8	.\kernel\i8259.asm	/^irq_8:$/;"	l
+irq_9	.\kernel\i8259.asm	/^irq_9:$/;"	l
+irq_handler_table	.\kernel\i8259.c	/^void *irq_handler_table[16];$/;"	v
+irq_hd_handler	.\kernel\blk\hd.c	/^public void irq_hd_handler()$/;"	f
+irq_keyboard_handler	.\kernel\chr\keyboard.c	/^public void irq_keyboard_handler()$/;"	f
+irq_timer_handler	.\kernel\sched.c	/^public void irq_timer_handler(int cpl)$/;"	f
+is_current_tty	.\kernel\chr\tty.c	/^public unsigned int is_current_tty(struct_tty *tty)$/;"	f
+is_digit	.\kernel\vsprintf.c	13;"	d	file:
+is_hd_busy	.\kernel\blk\hd.c	/^private int is_hd_busy()$/;"	f
+is_hd_error	.\kernel\blk\hd.c	/^private int is_hd_error()$/;"	f
+is_hd_ready	.\kernel\blk\hd.c	/^private int is_hd_ready()$/;"	f
+is_match	.\fs\namei.c	/^private int is_match(char *filename,struct_dir_entry *de)$/;"	f
+is_nmatch	.\fs\namei.c	/^private int is_nmatch(char *filename,struct_dir_entry *de,int len)$/;"	f
+kbuffer	.\kernel\chr\keyboard.c	/^private struct_keyboard kbuffer;$/;"	v
+kernel_code	.\boot\oshead.asm	/^kernel_code:$/;"	l
+kernel_data	.\boot\oshead.asm	/^kernel_data:$/;"	l
+kernel_time	.\include\process.h	/^    unsigned int kernel_time;   \/*进程在核心态运行的时间*\/$/;"	m	struct:_struct_process
+keyboard_read	.\kernel\chr\keyboard.c	/^public void keyboard_read(struct_tty *tty)$/;"	f
+keyboard_wait	.\kernel\chr\keyboard.c	/^private void keyboard_wait()$/;"	f
+keyboard_wait_ack	.\kernel\chr\keyboard.c	/^private void keyboard_wait_ack()$/;"	f
+keymap	.\include\keymap.h	/^public unsigned int keymap[NR_SCAN_CODES * KEYMAP_COLS] = {$/;"	v
+kmain	.\init\kmain.c	/^public void kmain(void)$/;"	f
+kstack	.\kernel\sched.c	/^    char kstack[PAGE_SIZE];$/;"	m	union:union_process	file:
+label_exit	.\mm\pf.asm	/^label_exit:$/;"	l
+label_exit	.\oslib\string.asm	/^label_exit:$/;"	l
+label_memcpy_exit	.\oslib\string.asm	/^label_memcpy_exit:$/;"	l
+label_research	.\oslib\string.asm	/^label_research:$/;"	l
+label_strlen_exit	.\oslib\string.asm	/^label_strlen_exit:$/;"	l
+label_sys_end	.\boot\oshead.asm	/^label_sys_end:$/;"	l
+land_zone	.\include\hd.h	/^    u16 land_zone;         \/*磁头着陆柱（停止）面号*\/$/;"	m	struct:_struct_hd
+last_access	.\include\fs.h	/^    unsigned int last_access;   \/*最近访问时间*\/$/;"	m	struct:_struct_inode
+last_access	.\include\fs.h	/^    unsigned int last_access;   \/*最近访问时间*\/$/;"	m	struct:_struct_mem_inode
+ldt	.\include\process.h	/^    struct_descriptor ldt[3];   \/*0-cs,1-ds and ss*\/$/;"	m	struct:_struct_process
+ldt_selector	.\include\process.h	/^    unsigned int ldt_selector;$/;"	m	struct:_struct_tss
+lf	.\kernel\chr\console.c	/^private void lf(struct_console *console)$/;"	f
+limit0_15	.\include\kernel.h	/^    u16 limit0_15;$/;"	m	struct:_struct_descriptor
+limit0_15	.\include\kernel.h	/^    unsigned int limit0_15:16;      \/*段长度低16位*\/$/;"	m	struct:_struct_descriptor_detail
+limit16_19	.\include\kernel.h	/^    unsigned int limit16_19:4;      \/*段长度的最高4位*\/$/;"	m	struct:_struct_descriptor_detail
+load_ldt	.\kernel\kernel.asm	/^load_ldt:$/;"	l
+load_seg	.\kernel\kernel.asm	/^load_seg:$/;"	l
+load_tr	.\kernel\kernel.asm	/^load_tr:$/;"	l
+lock_inode	.\fs\inode.c	/^private void lock_inode(struct_mem_inode *inode)$/;"	f
+lock_mem_buffer	.\kernel\buffer.c	/^public void lock_mem_buffer(struct_mem_buffer *mbuffer)$/;"	f
+lock_super	.\fs\super.c	/^private void lock_super(struct_mem_super_block *sb)$/;"	f
+locked	.\include\buffer.h	/^    unsigned char locked;       \/*是否加锁*\/$/;"	m	struct:_struct_mem_buffer
+locked	.\include\fs.h	/^    unsigned char locked;                \/*锁定标志*\/$/;"	m	struct:_struct_mem_super_block
+locked	.\include\fs.h	/^    unsigned char locked;       \/*i节点被锁定标志*\/$/;"	m	struct:_struct_mem_inode
+magic	.\include\fs.h	/^    u16 magic;             \/*用于数据校验*\/$/;"	m	struct:_struct_mem_super_block
+magic	.\include\fs.h	/^    u16 magic;             \/*用于数据校验*\/$/;"	m	struct:_struct_super_block
+main_memory_end	.\kernel\kernel.c	/^public unsigned int main_memory_end;$/;"	v
+main_memory_pages	.\mm\memory.c	/^private int main_memory_pages;$/;"	v
+main_memory_start	.\kernel\kernel.c	/^public unsigned int main_memory_start;$/;"	v
+map_page	.\mm\memory.c	/^public u32 map_page(u32 phy_page,u32 address)$/;"	f
+max_size	.\include\fs.h	/^    u32 max_size;          \/*文件的最大长度*\/$/;"	m	struct:_struct_mem_super_block
+max_size	.\include\fs.h	/^    u32 max_size;          \/*文件的最大长度*\/$/;"	m	struct:_struct_super_block
+mbuffer	.\include\blk.h	/^    struct_mem_buffer *mbuffer;     \/*高速缓冲指针*\/$/;"	m	struct:_struct_request
+mem_buffer_init	.\kernel\buffer.c	/^public void mem_buffer_init()$/;"	f
+mem_buffers	.\kernel\buffer.c	/^public struct_mem_buffer *mem_buffers;$/;"	v
+mem_init	.\mm\memory.c	/^public void mem_init()$/;"	f
+mem_map	.\mm\memory.c	/^private unsigned char mem_map[NR_PAGES];$/;"	v
+mem_size	.\include\console.h	/^    unsigned int mem_size;          \/*空间大小*\/$/;"	m	struct:_struct_console
+memcpy	.\oslib\string.asm	/^memcpy:$/;"	l
+memset	.\oslib\string.asm	/^memset:$/;"	l
+minute	.\include\time.h	/^    unsigned int minute;$/;"	m	struct:_struct_time
+mode	.\include\fs.h	/^    unsigned int mode;          \/*文件类型和属性*\/$/;"	m	struct:_struct_inode
+mode	.\include\fs.h	/^    unsigned int mode;          \/*文件类型和属性*\/$/;"	m	struct:_struct_mem_inode
+mode	.\include\fs.h	/^    unsigned short mode;        \/*文件类型和访问属性，比如只读、只写，对应inode.mode*\/$/;"	m	struct:_struct_file
+modify_time	.\include\fs.h	/^    unsigned int modify_time;   \/*修改时间*\/$/;"	m	struct:_struct_inode
+modify_time	.\include\fs.h	/^    unsigned int modify_time;   \/*修改时间*\/$/;"	m	struct:_struct_mem_inode
+month	.\include\time.h	/^    unsigned int month;         \/*从0开始*\/$/;"	m	struct:_struct_time
+mount	.\include\fs.h	/^    unsigned char mount;        \/*i节点安装了其它文件系统标志*\/$/;"	m	struct:_struct_mem_inode
+move_to_protect	.\boot\rmtopm.asm	/^move_to_protect:$/;"	l
+move_to_user	.\include\sched.h	11;"	d
+name	.\include\fs.h	/^    char name[NAME_LEN];$/;"	m	struct:_struct_dir_entry
+namei	.\fs\namei.c	/^public struct_mem_inode *namei(char *pathname)$/;"	f
+new_block	.\fs\bitmap.c	/^int new_block(int dev)$/;"	f
+new_inode	.\fs\bitmap.c	/^public struct_mem_inode *new_inode(int dev)$/;"	f
+next	.\include\blk.h	/^    struct _struct_request *next;   \/*指向下一请求项*\/$/;"	m	struct:_struct_request	typeref:struct:_struct_request::_struct_request
+next	.\include\buffer.h	/^    struct_mem_buffer *next;    \/*双向链表*\/$/;"	m	struct:_struct_mem_buffer
+nlinks	.\include\fs.h	/^    unsigned int nlinks;        \/*有多少目录项指向此inode*\/$/;"	m	struct:_struct_inode
+nlinks	.\include\fs.h	/^    unsigned int nlinks;        \/*有多少目录项指向此inode*\/$/;"	m	struct:_struct_mem_inode
+nmi	.\kernel\interrupt.asm	/^nmi:$/;"	l
+no_error_code	.\kernel\interrupt.asm	/^no_error_code:$/;"	l
+nop	.\oslib\oslib.asm	/^nop:$/;"	l
+not_found	.\oslib\string.asm	/^not_found:$/;"	l
+nr_blocks	.\include\fs.h	/^    u16 nr_blocks;    \/*数据块数（数据块）*\/$/;"	m	struct:_struct_mem_super_block
+nr_blocks	.\include\fs.h	/^    u16 nr_blocks;    \/*数据块数（数据块）*\/$/;"	m	struct:_struct_super_block
+nr_buffers	.\kernel\buffer.c	/^int nr_buffers = 0;$/;"	v
+nr_current_tty	.\kernel\chr\tty.c	/^public unsigned int nr_current_tty;$/;"	v
+nr_errors	.\include\blk.h	/^    int nr_errors;                  \/*读写发生错误的次数*\/$/;"	m	struct:_struct_request
+nr_hd	.\kernel\blk\hd.c	/^private int nr_hd;$/;"	v
+nr_inodes	.\include\fs.h	/^    u16 nr_inodes;         \/*i节点数*\/$/;"	m	struct:_struct_mem_super_block
+nr_inodes	.\include\fs.h	/^    u16 nr_inodes;         \/*i节点数*\/$/;"	m	struct:_struct_super_block
+nr_sectors	.\include\blk.h	/^    unsigned int nr_sectors;        \/*读写扇区总数*\/$/;"	m	struct:_struct_request
+nr_sectors	.\include\hd.h	/^    unsigned int nr_sectors;        \/*扇区总数*\/$/;"	m	struct:_struct_hd_partition
+nr_sectors	.\include\hd.h	/^    unsigned int nr_sectors;        \/*扇区数*\/$/;"	m	struct:_struct_partition
+null	.\include\type.h	49;"	d
+null_int	.\boot\oshead.asm	/^null_int:$/;"	l
+num_lock	.\kernel\chr\keyboard.c	/^private u8 num_lock;$/;"	v
+number	.\kernel\vsprintf.c	/^private char *number(char *str,int num,int base,int size,int precision,int flags)$/;"	f
+numpad_map	.\include\keymap.h	/^public u32 numpad_map[NR_NUMPAD_KEY] = {$/;"	v
+offset	.\include\fs.h	/^    unsigned int offset;        \/*当前读写偏移位置*\/$/;"	m	struct:_struct_file
+offset0_15	.\include\kernel.h	/^    u16 offset0_15;$/;"	m	struct:_struct_gate
+offset0_15	.\include\kernel.h	/^    unsigned int offset0_15:16;     \/*偏移低16位*\/$/;"	m	struct:_struct_gate_detail
+offset16_31	.\include\kernel.h	/^    u16 offset16_31;$/;"	m	struct:_struct_gate
+offset16_31	.\include\kernel.h	/^    unsigned offset16_31:16;        \/*偏移高16位*\/$/;"	m	struct:_struct_gate_detail
+org	.\boot\loader.asm	/^org 0x07c00$/;"	l
+out	.\include\type.h	16;"	d
+out_byte	.\include\io.h	11;"	d
+output_flags	.\include\tty.h	/^    unsigned int output_flags;$/;"	m	struct:_struct_tty
+overflow	.\kernel\interrupt.asm	/^overflow:$/;"	l
+p	.\include\kernel.h	/^    unsigned int p:1;               \/*0-段不在内存，1-段在内存*\/$/;"	m	struct:_struct_descriptor_detail
+p	.\include\kernel.h	/^    unsigned int p:1;               \/*0-段不在内存，1-段在内存*\/$/;"	m	struct:_struct_gate_detail
+p_head	.\include\keyboard.h	/^    char* p_head;$/;"	m	struct:_struct_keyboard
+p_head	.\include\tty.h	/^    unsigned int *p_head;$/;"	m	struct:_struct_tty_buffer
+p_tail	.\include\keyboard.h	/^    char* p_tail;$/;"	m	struct:_struct_keyboard
+p_tail	.\include\tty.h	/^    unsigned int *p_tail;$/;"	m	struct:_struct_tty_buffer
+page_fault	.\mm\pf.asm	/^page_fault:$/;"	l
+paramcount	.\include\kernel.h	/^    unsigned int paramcount:5;      \/*参数个数*\/$/;"	m	struct:_struct_gate_detail
+pcount	.\include\kernel.h	/^    u8 pcount;$/;"	m	struct:_struct_gate
+phy_start_sector	.\include\hd.h	/^    unsigned int phy_start_sector;  \/*起始扇区号，从整个硬盘顺序，从0计起*\/$/;"	m	struct:_struct_partition
+pid	.\include\process.h	/^    unsigned int pid;           \/*进程标识号*\/$/;"	m	struct:_struct_process
+pid	.\include\tty.h	/^    unsigned int pid;$/;"	m	struct:_struct_tty
+pop	.\kernel\i8259.asm	/^    pop     ds$/;"	d
+pop	.\kernel\interrupt.asm	/^    pop     ds$/;"	d
+pop	.\kernel\syscall.asm	/^    pop     ds$/;"	d
+pop	.\mm\pf.asm	/^    pop     ds$/;"	d
+port_read	.\include\io.h	36;"	d
+port_write	.\include\io.h	40;"	d
+ppid	.\include\process.h	/^    unsigned int ppid;          \/*父进程标识号*\/$/;"	m	struct:_struct_process
+pre_tss_selector	.\include\process.h	/^    u16 pre_tss_selector;$/;"	m	struct:_struct_tss
+precomp	.\include\hd.h	/^    u16 precomp;           \/*写前预补偿*\/$/;"	m	struct:_struct_hd
+prev	.\include\buffer.h	/^    struct_mem_buffer *prev;    \/*双向链表*\/$/;"	m	struct:_struct_mem_buffer
+printfs	.\kernel\printfs.c	/^int printfs(const char *fmt,...)$/;"	f
+priority	.\include\process.h	/^    unsigned int priority;      \/*进程优先级，在调度时使用，0-31*\/$/;"	m	struct:_struct_process
+private	.\include\type.h	12;"	d
+proc_wait	.\include\blk.h	/^    struct_process *proc_wait;      \/*等待操作完成的地方*\/$/;"	m	struct:_struct_request
+proc_wait	.\include\buffer.h	/^    struct_process *proc_wait;   \/*等待此内存缓冲块的进程头指针*\/$/;"	m	struct:_struct_mem_buffer
+proc_wait	.\include\fs.h	/^    struct_process *proc_wait;           \/*等待本超级块的进程指针*\/$/;"	m	struct:_struct_mem_super_block
+proc_wait	.\include\fs.h	/^    struct_process *proc_wait;  \/*等待此i节点的进程*\/$/;"	m	struct:_struct_mem_inode
+proc_wait_buffer	.\kernel\buffer.c	/^private struct_process *proc_wait_buffer;$/;"	v
+proc_wait_for_request	.\kernel\blk\rw_blk.c	/^private struct_process *proc_wait_for_request = NULL;$/;"	v
+process	.\kernel\process.c	/^public struct_process *process[NR_PROCESS];$/;"	v
+process	.\kernel\sched.c	/^    struct_process process;$/;"	m	union:union_process	file:
+process	.\kernel\sched.c	/^struct_process *process[NR_PROCESS];$/;"	v
+process1	.\init\kmain.c	/^private void process1()$/;"	f
+public	.\include\type.h	11;"	d
+push	.\kernel\i8259.asm	/^    push    ds$/;"	d
+push	.\kernel\interrupt.asm	/^    push    ds$/;"	d
+push	.\kernel\syscall.asm	/^    push    ds$/;"	d
+push	.\mm\pf.asm	/^    push    ds$/;"	d
+put_char_to_tty_write	.\kernel\chr\tty.c	/^public void put_char_to_tty_write(struct_tty *tty,char c)$/;"	f
+put_inode	.\fs\inode.c	/^public void put_inode(struct_mem_inode *inode)$/;"	f
+put_key_to_tty_read	.\kernel\chr\tty.c	/^public void put_key_to_tty_read(struct_tty *tty,u32 key)$/;"	f
+put_key_to_tty_write	.\kernel\chr\tty.c	/^public void put_key_to_tty_write(struct_tty *tty,unsigned int key)$/;"	f
+put_super	.\fs\super.c	/^public void put_super(int dev)$/;"	f
+pwd	.\include\process.h	/^    struct_mem_inode *pwd;      \/*工作目录*\/$/;"	m	struct:_struct_process
+read_buffer	.\include\tty.h	/^    struct_tty_buffer read_buffer;$/;"	m	struct:_struct_tty
+read_byte_form_keyboard	.\kernel\chr\keyboard.c	/^private unsigned char read_byte_form_keyboard()$/;"	f
+read_cmos	.\oslib\clib.c	/^public u8 read_cmos(u8 addr)$/;"	f
+read_inode	.\fs\inode.c	/^private void read_inode(struct_mem_inode *inode)$/;"	f
+read_only	.\include\fs.h	/^    unsigned char read_only;             \/*只读标志*\/$/;"	m	struct:_struct_mem_super_block
+read_os	.\boot\loader.asm	/^read_os:$/;"	l
+read_super	.\fs\super.c	/^private struct_mem_super_block *read_super(int dev)$/;"	f
+reads	.\boot\loader.asm	/^reads:$/;"	l
+release_tty	.\kernel\chr\tty.c	/^public void release_tty(struct_tty *tty)$/;"	f
+reload_cr3	.\kernel\kernel.asm	/^reload_cr3:$/;"	l
+reserved	.\include\kernel.h	/^    unsigned int reserved:1;        \/*保留，必须为0*\/$/;"	m	struct:_struct_descriptor_detail
+reserved	.\include\kernel.h	/^    unsigned int reserved:3;        \/*保留，必须为0*\/$/;"	m	struct:_struct_gate_detail
+reserved	.\kernel\interrupt.asm	/^reserved:$/;"	l
+reserved1	.\include\process.h	/^    u16 reserved1;$/;"	m	struct:_struct_tss
+reset_controller	.\kernel\blk\hd.c	/^private reset_controller()$/;"	f
+reset_hd	.\kernel\blk\hd.c	/^private void reset_hd(int driver)$/;"	f
+rlf	.\kernel\chr\console.c	/^private void rlf(struct_console *console)$/;"	f
+root	.\include\process.h	/^    struct_mem_inode *root;     \/*文件系统根目录*\/$/;"	m	struct:_struct_process
+root_inode	.\include\fs.h	/^    struct_mem_inode *root_inode;        \/*被安装文件系统根节点inode*\/$/;"	m	struct:_struct_mem_super_block
+rw_blk	.\kernel\blk\rw_blk.c	/^public void rw_blk(int rw,struct_mem_buffer *mbuffer)$/;"	f
+s	.\include\kernel.h	/^    unsigned int s:1;               \/*描述符类型，0-代码或数据段，1-系统段或门*\/$/;"	m	struct:_struct_gate_detail
+s	.\include\kernel.h	/^    unsigned int s:1;               \/*描述符类型，1-代码或数据段，0-系统段或门*\/$/;"	m	struct:_struct_descriptor_detail
+sched_init	.\kernel\sched.c	/^public void sched_init()$/;"	f
+schedule	.\kernel\sched.c	/^public void schedule()$/;"	f
+scroll_down	.\kernel\chr\console.c	/^public void scroll_down(struct_console *console)$/;"	f
+scroll_lock	.\kernel\chr\keyboard.c	/^private u8 scroll_lock;$/;"	v
+scroll_up	.\kernel\chr\console.c	/^public void scroll_up(struct_console *console)$/;"	f
+second	.\include\time.h	/^    unsigned int second;$/;"	m	struct:_struct_time
+sector	.\boot\loader.asm	/^sector:$/;"	l
+sectors_per_track	.\boot\loader.asm	/^sectors_per_track:$/;"	l
+sectors_per_track	.\include\hd.h	/^    u8 sectors_per_track;  \/*每磁道扇区数*\/$/;"	m	struct:_struct_hd
+seg_not_present	.\kernel\interrupt.asm	/^seg_not_present:$/;"	l
+segattr	.\include\kernel.h	/^    u8 segattr;$/;"	m	struct:_struct_descriptor
+selector	.\include\kernel.h	/^    u16 selector;$/;"	m	struct:_struct_gate
+selector	.\include\kernel.h	/^    unsigned int selector:16;       \/*段选择符*\/$/;"	m	struct:_struct_gate_detail
+set_bit	.\oslib\string.asm	/^set_bit:$/;"	l
+set_console_cursor	.\kernel\chr\console.c	/^private void set_console_cursor(struct_console *console)$/;"	f
+set_console_origin	.\kernel\chr\console.c	/^public void set_console_origin(struct_console *console)$/;"	f
+set_current_console	.\kernel\chr\console.c	/^public void set_current_console(struct_tty *current_tty)$/;"	f
+set_current_tty	.\kernel\chr\tty.c	/^public void set_current_tty(unsigned int nr)$/;"	f
+set_descriptor	.\kernel\kernel.c	/^public inline void set_descriptor(struct_descriptor *sd,u16 limit0_15,$/;"	f
+set_gate	.\kernel\kernel.c	/^private inline void set_gate(int vector,int_handler handler,u8 gate_type,u8 dpl)$/;"	f
+set_gate_descriptor	.\kernel\kernel.c	/^private inline void set_gate_descriptor(int vector,u32 offset,u16 selector,$/;"	f
+set_interrupt_gate	.\kernel\kernel.c	/^public inline void set_interrupt_gate(int vector,int_handler handler)$/;"	f
+set_irq_handler	.\kernel\i8259.c	/^public void set_irq_handler(u8 irq,void *handler)$/;"	f
+set_ldt_desc	.\kernel\kernel.c	/^public inline void set_ldt_desc(struct_descriptor *sd,u16 limit,u32 base)$/;"	f
+set_leds	.\kernel\chr\keyboard.c	/^private void set_leds()$/;"	f
+set_seg_base	.\kernel\kernel.c	/^public inline void set_seg_base(struct_descriptor *sd,u32 base)$/;"	f
+set_system_call	.\kernel\syscall.c	/^public void set_system_call(unsigned int nr_call,void *fn_sys_call)$/;"	f
+set_system_gate	.\kernel\kernel.c	/^public inline void set_system_gate(int vector,int_handler handler)$/;"	f
+set_trap_gate	.\kernel\kernel.c	/^public inline void set_trap_gate(int vector,int_handler handler)$/;"	f
+set_tss_desc	.\kernel\kernel.c	/^public inline void set_tss_desc(struct_descriptor *sd,u16 limit,u32 base)$/;"	f
+setdir_again	.\boot\oshead.asm	/^setdir_again:$/;"	l
+settbl_again	.\boot\oshead.asm	/^settbl_again:$/;"	l
+sig_blocked	.\include\process.h	/^    unsigned int sig_blocked;   \/*用于屏蔽信号*\/$/;"	m	struct:_struct_process
+sigaction	.\include\process.h	/^    struct_sigaction sigaction[32];     \/*信号处理过程*\/$/;"	m	struct:_struct_process
+signal	.\include\process.h	/^    unsigned int signal;        \/*进程收到的信号*\/$/;"	m	struct:_struct_process
+single_step	.\kernel\interrupt.asm	/^single_step:$/;"	l
+size	.\include\fs.h	/^    unsigned int size;          \/*文件长度，字节*\/$/;"	m	struct:_struct_inode
+size	.\include\fs.h	/^    unsigned int size;          \/*文件长度，字节*\/$/;"	m	struct:_struct_mem_inode
+sleep_on	.\kernel\sched.c	/^public void sleep_on(struct_process **proc_wait_head)$/;"	f
+ss	.\include\process.h	/^    unsigned int ss;$/;"	m	struct:_struct_tss
+ss0	.\include\process.h	/^    unsigned int ss0;$/;"	m	struct:_struct_tss
+ss1	.\include\process.h	/^    unsigned int ss1;$/;"	m	struct:_struct_tss
+ss2	.\include\process.h	/^    unsigned int ss2;$/;"	m	struct:_struct_tss
+stack_exception	.\kernel\interrupt.asm	/^stack_exception:$/;"	l
+start_code	.\include\process.h	/^    int start_code,end_code,end_data,end_bss,start_stack;$/;"	m	struct:_struct_process
+start_cyl	.\include\hd.h	/^    unsigned char start_cyl;        \/*起始柱面号的低8位*\/$/;"	m	struct:_struct_partition
+start_head	.\include\hd.h	/^    unsigned char start_head;       \/*起始磁头号*\/$/;"	m	struct:_struct_partition
+start_mem_addr	.\include\console.h	/^    unsigned int start_mem_addr;    \/*物理位置*\/$/;"	m	struct:_struct_console
+start_sector	.\include\blk.h	/^    unsigned int start_sector;      \/*起使扇区，相对于当前分区的序号，不能大于分区总扇区数*\/$/;"	m	struct:_struct_request
+start_sector	.\include\hd.h	/^    unsigned char start_sector;     \/*起始扇区号（0-5位，柱面中），高两位为起始柱面号的8、9位*\/$/;"	m	struct:_struct_partition
+start_sector	.\include\hd.h	/^    unsigned int start_sector;      \/*物理起始扇区号*\/$/;"	m	struct:_struct_hd_partition
+start_stack	.\include\process.h	/^    int start_code,end_code,end_data,end_bss,start_stack;$/;"	m	struct:_struct_process
+state	.\include\process.h	/^    unsigned int state;         \/*进程状态*\/$/;"	m	struct:_struct_process
+strchr	.\oslib\string.asm	/^strchr:$/;"	l
+strlen	.\oslib\string.asm	/^strlen:$/;"	l
+strncpy	.\include\string.h	18;"	d
+struct_blk_dev	.\include\blk.h	/^}struct_blk_dev;$/;"	t	typeref:struct:_struct_blk_dev
+struct_console	.\include\console.h	/^}struct_console;$/;"	t	typeref:struct:_struct_console
+struct_descriptor	.\include\kernel.h	/^}struct_descriptor;$/;"	t	typeref:struct:_struct_descriptor
+struct_descriptor_detail	.\include\kernel.h	/^}struct_descriptor_detail;$/;"	t	typeref:struct:_struct_descriptor_detail
+struct_dir_entry	.\include\fs.h	/^}struct_dir_entry;$/;"	t	typeref:struct:_struct_dir_entry
+struct_file	.\include\fs.h	/^}struct_file;$/;"	t	typeref:struct:_struct_file
+struct_gate	.\include\kernel.h	/^}struct_gate;$/;"	t	typeref:struct:_struct_gate
+struct_gate_detail	.\include\kernel.h	/^}struct_gate_detail;$/;"	t	typeref:struct:_struct_gate_detail
+struct_hd	.\include\hd.h	/^}struct_hd;$/;"	t	typeref:struct:_struct_hd
+struct_hd_info	.\include\type.h	/^}struct_hd_info;$/;"	t	typeref:struct:_struct_hd_info
+struct_hd_partition	.\include\hd.h	/^}struct_hd_partition;$/;"	t	typeref:struct:_struct_hd_partition
+struct_inode	.\include\fs.h	/^}struct_inode;$/;"	t	typeref:struct:_struct_inode
+struct_keyboard	.\include\keyboard.h	/^}struct_keyboard;$/;"	t	typeref:struct:_struct_keyboard
+struct_mem_buffer	.\include\buffer.h	/^typedef struct _struct_mem_buffer struct_mem_buffer;$/;"	t	typeref:struct:_struct_mem_buffer
+struct_mem_inode	.\include\fs.h	/^}struct_mem_inode;$/;"	t	typeref:struct:_struct_mem_inode
+struct_mem_super_block	.\include\fs.h	/^}struct_mem_super_block;$/;"	t	typeref:struct:_struct_mem_super_block
+struct_partition	.\include\hd.h	/^}struct_partition;$/;"	t	typeref:struct:_struct_partition
+struct_process	.\include\kernel.h	/^typedef struct _struct_process struct_process;$/;"	t	typeref:struct:_struct_process
+struct_request	.\include\blk.h	/^}struct_request;$/;"	t	typeref:struct:_struct_request
+struct_sigaction	.\include\signal.h	/^typedef int struct_sigaction;$/;"	t
+struct_super_block	.\include\fs.h	/^}struct_super_block;$/;"	t	typeref:struct:_struct_super_block
+struct_time	.\include\time.h	/^}struct_time;$/;"	t	typeref:struct:_struct_time
+struct_tss	.\include\kernel.h	/^typedef struct _struct_tss struct_tss;$/;"	t	typeref:struct:_struct_tss
+struct_tty	.\include\tty.h	/^}struct_tty;$/;"	t	typeref:struct:_struct_tty
+struct_tty_buffer	.\include\tty.h	/^}struct_tty_buffer;$/;"	t	typeref:struct:_struct_tty_buffer
+super_block	.\fs\super.c	/^struct_mem_super_block super_block[NR_SUPER];$/;"	v
+sync_dev	.\kernel\buffer.c	/^public void sync_dev(int dev)$/;"	f
+sync_inodes	.\fs\inode.c	/^public void sync_inodes(void)$/;"	f
+sys_call	.\kernel\syscall.asm	/^sys_call:$/;"	l
+sys_call_table	.\kernel\syscall.c	/^public fn_sys_call sys_call_table[NR_SYS_CALLS] = {$/;"	v
+sys_fork	.\kernel\syscall.asm	/^sys_fork:$/;"	l
+sys_gdt	.\boot\oshead.asm	/^sys_gdt:            $/;"	l
+sys_gdt_48	.\boot\oshead.asm	/^sys_gdt_48:$/;"	l
+sys_getpid	.\kernel\sched.c	/^public int sys_getpid()$/;"	f
+sys_hd_info	.\kernel\kernel.c	/^public void *sys_hd_info;$/;"	v
+sys_id	.\include\hd.h	/^    unsigned char sys_id;           \/*分区类型*\/$/;"	m	struct:_struct_partition
+sys_idt	.\boot\oshead.asm	/^sys_idt:$/;"	l
+sys_idt_48	.\boot\oshead.asm	/^sys_idt_48:$/;"	l
+sys_key_process	.\kernel\chr\tty.c	/^public void sys_key_process(struct_tty *tty,u32 key)$/;"	f
+sys_last_pid	.\kernel\fork.c	/^public int sys_last_pid = 0;$/;"	v
+sys_memory_end	.\kernel\kernel.c	/^public unsigned int sys_memory_end;$/;"	v
+sys_memory_start	.\kernel\kernel.c	/^public unsigned int sys_memory_start;$/;"	v
+sys_pause	.\kernel\sched.c	/^public int sys_pause(void)$/;"	f
+sys_pgdir	.\boot\oshead.asm	/^sys_pgdir:$/;"	l
+sys_pgtbl	.\boot\oshead.asm	/^sys_pgtbl:$/;"	l
+sys_read	.\fs\rw.c	/^public int sys_read(u32 fhandle,char *buffer,int count)$/;"	f
+sys_root_dev	.\kernel\kernel.c	/^public int sys_root_dev;$/;"	v
+sys_stack	.\kernel\sched.c	/^public int sys_stack[1024];$/;"	v
+sys_startup_time	.\kernel\kernel.c	/^public unsigned int sys_startup_time;$/;"	v
+sys_ticks	.\kernel\kernel.c	/^public unsigned int sys_ticks;$/;"	v
+sys_ticks	.\kernel\sched.c	/^unsigned int sys_ticks;$/;"	v
+sys_write	.\fs\rw.c	/^public int sys_write(u32 fhandle,char *buffer,int count)$/;"	f
+syscall0	.\include\stdcall.h	19;"	d
+syscall1	.\include\stdcall.h	28;"	d
+syscall2	.\include\stdcall.h	37;"	d
+syscall3	.\include\stdcall.h	46;"	d
+syscall_init	.\kernel\syscall.c	/^public void syscall_init()$/;"	f
+task_tty	.\kernel\chr\tty.c	/^public void task_tty(void)$/;"	f
+tflag	.\include\process.h	/^    u16 tflag;$/;"	m	struct:_struct_tss
+ticks	.\include\process.h	/^    unsigned int ticks;         \/*进程剩余的时间片数，0-15*\/$/;"	m	struct:_struct_process
+timer_init	.\kernel\ktime.c	/^public void timer_init()$/;"	f
+top	.\include\console.h	/^    unsigned int top;               \/*屏幕顶端行，相对起始位置*\/$/;"	m	struct:_struct_console
+true	.\include\type.h	53;"	d
+truncate	.\fs\truncate.c	/^public void truncate(struct_mem_inode *inode)$/;"	f
+tss	.\include\process.h	/^    struct_tss tss;             \/*tss for this process*\/$/;"	m	struct:_struct_process
+tty	.\include\process.h	/^    struct_tty *tty;            \/*当前进程使用的tty*\/$/;"	m	struct:_struct_process
+tty_read	.\kernel\chr\tty.c	/^public int tty_read(unsigned int nr_tty,char *buffer,int len)$/;"	f
+tty_write	.\kernel\chr\tty.c	/^public int tty_write(unsigned int nr_tty,char *buffer,int len)$/;"	f
+type	.\include\kernel.h	/^    unsigned int type:4;            \/*段类型，与s一同作用*\/$/;"	m	struct:_struct_descriptor_detail
+type	.\include\kernel.h	/^    unsigned int type:4;            \/*段类型，与s一起使用*\/$/;"	m	struct:_struct_gate_detail
+u128	.\include\type.h	/^}u128;$/;"	t	typeref:struct:_struct_u128
+u16	.\include\type.h	/^typedef unsigned short u16;$/;"	t
+u32	.\include\type.h	/^typedef unsigned int u32;$/;"	t
+u64	.\include\type.h	/^}u64;$/;"	t	typeref:struct:_struct_u64
+u8	.\include\type.h	/^typedef unsigned char u8;$/;"	t
+union_process	.\kernel\sched.c	/^union union_process$/;"	u	file:
+unlock_inode	.\fs\inode.c	/^private void unlock_inode(struct_mem_inode *inode)$/;"	f
+unlock_mem_buffer	.\kernel\buffer.c	/^public void unlock_mem_buffer(struct_mem_buffer *mbuffer)$/;"	f
+unlock_super	.\fs\super.c	/^private void unlock_super(struct_mem_super_block *sb)$/;"	f
+uptodate	.\include\buffer.h	/^    unsigned char uptodate;     \/*缓冲块中的数据是有效的*\/$/;"	m	struct:_struct_mem_buffer
+uptodate	.\include\fs.h	/^    unsigned char uptodate;              \/*有效标志*\/    $/;"	m	struct:_struct_mem_super_block
+uptodate	.\include\fs.h	/^    unsigned char uptodate;       \/*i节点有效标志*\/$/;"	m	struct:_struct_mem_inode
+user_time	.\include\process.h	/^    unsigned int user_time;     \/*进程在用户态运行的时间*\/$/;"	m	struct:_struct_process
+va_arg	.\include\stdarg.h	33;"	d
+va_end	.\include\stdarg.h	38;"	d
+va_list	.\include\stdarg.h	/^typedef char *va_list;$/;"	t
+va_start	.\include\stdarg.h	26;"	d
+video_char_attr	.\kernel\chr\console.c	/^private u8 video_char_attr = 0x07;      \/*黑底白字*\/$/;"	v
+video_char_size	.\kernel\chr\console.c	/^private u8 video_char_size;             \/*每个字符在显存中占用字节数*\/$/;"	v
+video_cols_per_page	.\kernel\chr\console.c	/^private u8 video_cols_per_page;         \/*一屏幕字符列数*\/$/;"	v
+video_ctl_reg	.\kernel\chr\console.c	/^private u8 video_ctl_reg;               \/*显示器控制寄存器*\/$/;"	v
+video_data_reg	.\kernel\chr\console.c	/^private u8 video_data_reg;              \/*数据寄存器*\/$/;"	v
+video_erase_char	.\kernel\chr\console.c	/^private u16 video_erase_char;  \/*使用什么字符作为擦除字符*\/$/;"	v
+video_mem_move_up	.\kernel\chr\console.c	/^private void video_mem_move_up(struct_console *console)$/;"	f
+video_mem_size	.\kernel\chr\console.c	/^private unsigned int video_mem_size;    \/*显存大小*\/$/;"	v
+video_mem_start	.\kernel\chr\console.c	/^private unsigned int video_mem_start;   \/*显存起始地址*\/$/;"	v
+video_row_size	.\kernel\chr\console.c	/^private unsigned int video_row_size;    \/*每行占用字节数*\/$/;"	v
+video_rows_per_page	.\kernel\chr\console.c	/^private u8 video_rows_per_page;         \/*一屏幕字符行数*\/$/;"	v
+video_type	.\kernel\chr\console.c	/^private u8 video_type;                  \/*显示器类型，MDA、EGAM、EGA\/VGA、CGA*\/$/;"	v
+vsprintf	.\kernel\vsprintf.c	/^public int vsprintf(char *buf,const char *fmt,va_list args)$/;"	f
+wait_on_buffer	.\kernel\buffer.c	/^public  void wait_on_buffer(struct_mem_buffer *mbuffer)$/;"	f
+wait_on_inode	.\fs\inode.c	/^private void wait_on_inode(struct_mem_inode *inode)\\$/;"	f
+wait_on_super	.\fs\super.c	/^private void wait_on_super(struct_mem_super_block *sb)$/;"	f
+waitfor_hd	.\kernel\blk\hd.c	/^private int waitfor_hd(int state)$/;"	f
+wake_up	.\kernel\sched.c	/^public void wake_up(struct_process *p)$/;"	f
+wp_page	.\mm\pf.asm	/^wp_page:$/;"	l
+write	.\include\tty.h	/^    int (*write)(unsigned int nr_tty,char *buffer,int len);$/;"	m	struct:_struct_tty
+write_buffer	.\include\tty.h	/^    struct_tty_buffer write_buffer;$/;"	m	struct:_struct_tty
+write_inode	.\fs\inode.c	/^private void write_inode(struct_mem_inode *inode)$/;"	f
+write_verify	.\mm\memory.c	/^public void write_verify(u32 address)$/;"	f
+year	.\include\time.h	/^    unsigned int year;$/;"	m	struct:_struct_time
